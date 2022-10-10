@@ -6,7 +6,7 @@ import Logo from "../logo/Logo";
 const Mainheader = () => {
     return(
         <div className="parent-container">
-            <Logo />
+           <Logo />
         </div>
     )
 }
