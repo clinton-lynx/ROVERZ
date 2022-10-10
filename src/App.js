@@ -1,10 +1,13 @@
 import React from 'react';
-import './assets/styles/main.scss'
-import Header from './components/Header/Header'
+import './assets/styles/main.scss';
+import './components/header/Mainheader'
+import Mainheader from './components/header/Mainheader';
+
+
 function App() {
   return (
     <div className="App">
-       <Header />
+       <Mainheader />
     </div>
   );
 }
