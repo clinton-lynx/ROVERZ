@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+  }
+  
+  html {
+    font-family: 'Basis Grotesque', 'Montserrat', -apple-system,
+      BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    box-sizing: border-box;
+    text-size-adjust: 100%;
+    line-height: 1.43;
+    height: 100%;
+    width: 100%;
+    -webkit-locale: 'en';
+    direction: ltr;
+    unicode-bidi: isolate;
+    scrollbar-gutter: stable;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: calc(0.956em - 2px);
+    color: #232222;
+  }
+  button {
+    font-family: 'Poppings', 'Basis Grotesque', 'Poppings', -apple-system,
+      BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+      'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    cursor: pointer;
+    font-weight: 300;
+  }
+  
+  img {
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -webkit-optimize-contrast;
+  }
+  
+  .fade-enter {
+    opacity: 0;
+  }
+  
+  .fade-enter-active {
+    transition: 0.3s ease-in;
+  }
+  .fade-leave-active {
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+  }
+  .flip-list-move {
+    transition: transform 0.5s;
+  }
+  
+  .slide-up-enter-active,
+  .slide-up-leave-active {
+    transition: all 0.25s ease-out;
+  }
+  
+  .slide-up-enter-from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .slide-up-leave-to {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  
+  // calender
+  .vc-container.vc-is-expanded {
+    border: 1px solid transparent;
+  }
+  
+  .vc-day-content {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .vc-weekday {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  .vc-weeks {
+    padding: 0px 13px !important;
+  }
+  
+  .vc-highlight {
+    width: 100% !important;
+    height: 40px !important;
+  }
+  .vc-arrow {
+    border-radius: 100% !important;
+  }
+  //
+  
