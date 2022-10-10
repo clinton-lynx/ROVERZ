@@ -1,0 +1,61 @@
+.svg-icon.search-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin: 20px 0;
+    cursor: pointer;
+    margin-left: 8px;
+  
+    /* On hover: blue strokes */
+    &:focus,
+    &:hover {
+      .search-path {
+        stroke: #299ecc;
+      }
+    }
+  
+    /* On click: thicker black strokes  */
+    &:active {
+      .search-path {
+        stroke: #111516;
+        stroke-width: 2px;
+      }
+    }
+  }
+
+
+  .sub-parent-search-bar-container{
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+    height: inherit;
+    width: inherit;
+  }
+
+  .parent-search-bar-container{
+    width: 100%;
+    background-color: #fff;
+    max-width: 50rem;
+    height: 4.5rem;
+    padding: 0 1%;
+    width: 100%;
+    border-radius: 50px;
+    box-shadow: 0 4px 4px rgba(0,0,0, 0.4);
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  input.input-search-container{
+    width: 100%;
+    max-width: 45rem;
+    margin: 0 5px;
+    height: 100%;
+    margin: 7px 0;
+    margin-right: 10px;
+    max-height: 45px;
+    border: 1px solid #0000;
+    outline: none;
+    padding: 0 5px;
+}
+
+ 

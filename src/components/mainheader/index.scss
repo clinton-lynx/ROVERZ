@@ -1,0 +1,17 @@
+.parent-header-container{
+    width: 100%;
+    height: 100px;
+    padding: 1%;
+    max-width: 140rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sub-parent-container{
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
