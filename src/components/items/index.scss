@@ -1,0 +1,57 @@
+.parent-items-container{
+    width: 100%;
+}
+
+.sub-items-container{
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // flex-wrap: wrap;
+    margin: 1rem 0;
+    padding: 1%;
+    gap: 0.2rem;
+}
+
+.subitems-container{
+    min-width: 23%;
+    padding: 1%;
+    margin: 1% 0.5%;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.subitems-container:hover{
+   background-color: #000;
+
+   .items-one-text{
+    color: #fff;
+   }
+
+   svg.UmNoP{
+     color: #fff;
+     fill: #fff;
+   }
+}
+
+.slick-initailized{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: row;
+    position: relative;
+}
+
+.slick-arrow{
+    position: absolute;
+    z-index: 1;
+    bottom: 8px;
+}
+
+.slick-next{
+    right: 0px;
+}

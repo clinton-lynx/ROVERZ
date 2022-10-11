@@ -1,12 +1,12 @@
-import React from "react";
-import './index.scss'
+// import React from "react";
+// import './index.scss'
 
-const Footer = () => {
-    return(
-        <div className="parent-footer-container">
+// const Footer = () => {
+//     return(
+//         <div className="parent-footer-container">
+             
+//         </div>
+//     )
+// }
 
-        </div>
-    )
-}
-
-export default Footer
+// export default Footer
