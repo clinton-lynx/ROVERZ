@@ -1,33 +1,60 @@
 import React from "react";
 import './index.scss'
 import Slider from "react-slick"
-
-
-var btn = document.getElementsByClassName('slick-next')[0]
-console.log(btn)
-btn.innerHTML = '<i class="arrow right"'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const Items = () => {
     const settings = {
-        className: "center",
+        dots: true,
         infinite: false,
-        centerPadding: "60px",
-        slidesToShow: 4,
-        swipeToSlide: true,
-        afterChange: function(index) {
-          console.log(
-            `Slider Changed to: ${index + 1}, background: #222; color: #bada55`
-          );
-        }
-
-       
-
+        speed: 500,
+        slidesToShow: 5,
+        slidesToScroll: 4,
+        initialSlide: 0,
+        responsive: [
+          {
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2
+            }
+          },
+          {
+            breakpoint: 450,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
       };
+
+    //   var btn = document.getElementsByClassName('slick-next')[0]
+    //   btn.innerHTML = '<i class="arrow right"><i/>'
+
+    //   var btnSecond = document.getElementsByClassName('slick-prev')[0]
+    //   btnSecond.innerHTML = '<i class = "arrow left"><i/>'
+
+
       return (
         <div >
           <Slider {...settings}>
             <div>
              <SubItems />
+            </div>
+            <div>
+            <SubItems />
             </div>
             <div>
             <SubItems />

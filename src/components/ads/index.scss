@@ -1,0 +1,56 @@
+.parent-ads-container{
+    width: 100%;
+    height: 27rem;
+    margin: 3.5rem 0;
+    background-color: #0000004d;
+    position: relative;
+    max-width: 100rem;
+    margin: 3.5rem auto;
+ 
+}
+
+.sub-parent-ads-container{
+   width: 100%;
+   height: inherit;
+   position: absolute;
+   top: 0px;
+   background-image: url('../ads/images/down909.jpg');
+   background-size: contain;
+   z-index: 1;
+}
+
+.inner-text{
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    padding-left: 20px;
+}
+
+.main-text{
+    font-size: 5rem;
+    color: #fff;
+}
+
+.mini-text{
+    text-align: left;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+#main-btn{
+    width: 174px;
+    height: 63px;
+    border-radius: 100px;
+    border: 1px solid #0000;
+    font-size: 1.95rem;
+    font-weight: 100;
+    background-color: #fff;
+}
+
+.ads-overlay{
+    width: 100%;
+    height: inherit;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0px;
+}
