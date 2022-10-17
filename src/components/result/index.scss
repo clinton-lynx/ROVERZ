@@ -1,0 +1,79 @@
+.location-main-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem auto;
+    padding: 1.5% 0;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.location-card{
+    width: 24%;
+    height: 20rem;
+    background-color: rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition-duration: 1s;
+
+}
+
+.location-card:hover{
+    .card-text{
+        font-size: 2.1rem;
+        width: 100%;
+    }
+}
+
+.sub-result-container{
+    max-width: 100rem;
+    margin: 0 auto;
+    padding-top: 1rem;
+}
+
+.result-container{
+    width: 100%;
+}
+
+.main-location-card{
+    background-image: url('./images/caption2.jpg');
+    background-size: cover;
+    height: inherit;
+    position: relative;
+    z-index: 2;
+}
+
+.main-card-overlay{
+    width: inherit;
+    height: inherit;
+    
+}
+
+.card-text{
+    color: #fff;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    font-size: 2.3rem;
+    line-height: 1em;
+    width: inherit;
+    height: 7rem;
+    padding: 1%;
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.5), rgba(0,0,0,0.3), rgba(0,0,0,0.2) );
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-weight: 700;
+} 
+
+.main-header-destination{
+    margin-left: 10px;
+}

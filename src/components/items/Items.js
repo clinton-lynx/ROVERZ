@@ -48,7 +48,7 @@ const Items = () => {
 
 
       return (
-        <div >
+        <div className="general-items-container">
           <Slider {...settings}>
             <div>
              <SubItems />

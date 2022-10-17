@@ -4,8 +4,8 @@
     margin: 3.5rem 0;
     background-color: #0000004d;
     position: relative;
-    max-width: 100rem;
-    margin: 3.5rem auto;
+    // max-width: 100rem;
+    margin: 0 auto;
  
 }
 
@@ -21,9 +21,12 @@
 
 .inner-text{
     width: 100%;
-    position: absolute;
-    bottom: 50px;
-    padding-left: 20px;
+    max-width: 100rem;
+    margin: 0rem auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    padding: 1%;
 }
 
 .main-text{
@@ -39,12 +42,13 @@
 
 #main-btn{
     width: 174px;
-    height: 63px;
+    height: 53px;
     border-radius: 100px;
     border: 1px solid #0000;
     font-size: 1.95rem;
     font-weight: 100;
     background-color: #fff;
+    line-height: 0px;
 }
 
 .ads-overlay{

@@ -45,8 +45,8 @@ const Places = () => {
     return (
         <div className="parent-places-container">
             <div className="location-header-container">
-                <h1>Top Locations</h1>
-                <p>Book these experiences for a close-up look at Lagos.</p>
+                <h1 className="top-location-container">Top locations for you</h1>
+                <p className="book-text">Book these experiences for a close-up look at Lagos.</p>
             </div>
             <div className="main-slider-container">
                 <Slider {...settings}>

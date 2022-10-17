@@ -1,0 +1,59 @@
+.sub-banner-parent-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.banner-parent-container{
+    width: 100%;
+    // margin: 1% 0;
+    background-color: #000;
+}
+
+.banner-text-container{
+    width: 48.5%;
+    margin: 1% 0.5%;
+    border: 0.06em solid #ccc;
+    padding: 1% 1.25em;
+    position: relative;
+    // box-shadow: 2px 2px 4px 4px #fff;
+    border-style: unset ;
+    border-left:4px solid #fff;
+
+}
+
+.banner-image-container{
+    width: 48.5%;
+    margin: 1% 0.5%;
+    padding: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.banner-header-text{
+    font-size: 5rem;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.what-we-do-banner-header-text{
+    color: #fff;
+    font-size: 2.5rem;
+    letter-spacing:3px;
+    margin-bottom: 1.5rem;
+}
+
+.what-input-content{
+    font-size: 1.7rem;
+    line-height: 1.6em;
+    color: rgba(204, 204, 204, 0.541);
+}
