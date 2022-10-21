@@ -15,8 +15,8 @@ function App() {
        <Items />
        <Banner />
        <Places />
-       <Ads />
        <Result />
+       <Ads />
        <Footer />
     </div>
   );

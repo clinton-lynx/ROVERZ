@@ -1,3 +1,6 @@
+@import '../../assets/styles/main.scss';
+
+
 .location-main-wrapper{
     display: flex;
     align-items: center;
@@ -6,6 +9,24 @@
     padding: 1.5% 0;
     flex-wrap: wrap;
     gap: 0.5rem;
+
+    @include breakpoint-down($lg){
+        .location-card{
+            width: 32.33%;
+        }
+    }
+
+    @include breakpoint-down($md){
+        .location-card{
+            width: 48.5%;
+        }
+    }
+
+    @include breakpoint-down($sm){
+        .location-card{
+            width: 47.5%;
+        }
+    }
 }
 
 .location-card{
@@ -18,11 +39,12 @@
     transition: cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition-duration: 1s;
 
+
 }
 
 .location-card:hover{
     .card-text{
-        font-size: 2.1rem;
+        font-size: 1.89rem;
         width: 100%;
     }
 }
@@ -56,7 +78,7 @@
     position: absolute;
     bottom: 0px;
     left: 0px;
-    font-size: 2.3rem;
+    font-size: 1.5rem;
     line-height: 1em;
     width: inherit;
     height: 7rem;
@@ -76,4 +98,5 @@
 
 .main-header-destination{
     margin-left: 10px;
+    font-weight: 400;
 }

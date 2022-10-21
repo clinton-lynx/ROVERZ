@@ -1,3 +1,5 @@
+@import '../../assets/styles/main.scss';
+
 .parent-header-container{
     width: 100%;
     background-color: #fff;
@@ -15,18 +17,62 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
-    @include breakpoint-down(md){
-        .meun-content{
+    @include breakpoint-down ($md){
+      .list-item-content{
+        display: none;
+      }
+
+      .sub-parent-container{
+        min-width: 100%;
+      }
+
+      .humburger{
+        display: block;
+        min-width: 28.33%;
+      }
+
+      .parent-logo-container{
+        min-width: 33.33%;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+      }
+    }
+
+    @include breakpoint-down($lg){
+        .list-item-text{
             display: none;
         }
-      }
+    }
+
+    @include breakpoint-down($sm){
+        input.input-search-container{
+            display: none;
+        }
+
+        .sub-parent-search-bar-container{
+            justify-content: end;
+        }
+
+        .parent-search-bar-container{
+            box-shadow: 0px 0px 0px rgba(0,0,0,);
+        }
+
+        .parent-logo-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+
 }
 
 .sub-parent-container{
     width: inherit;
     height: inherit;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
     align-items: center;
     max-width: 60rem;
 }

@@ -1,11 +1,20 @@
+@import '../../assets/styles/main.scss';
+
+
 .parent-ads-container{
     width: 100%;
-    height: 27rem;
+    height: 21rem;
     margin: 3.5rem 0;
-    background-color: #0000004d;
     position: relative;
     // max-width: 100rem;
     margin: 0 auto;
+    padding-top: 3rem;
+
+    @include breakpoint-down($sm){
+       .main-text{
+        font-size: 3.5rem;
+       }
+    }
  
 }
 
@@ -17,6 +26,7 @@
    background-image: url('../ads/images/down909.jpg');
    background-size: contain;
    z-index: 1;
+   margin-top: 9rem;
 }
 
 .inner-text{
@@ -25,7 +35,7 @@
     margin: 0rem auto;
     display: flex;
     flex-direction: column;
-    margin-top: 10rem;
+    margin-top: 3rem;
     padding: 1%;
 }
 
@@ -38,14 +48,16 @@
     text-align: left;
     color: #fff;
     letter-spacing: 1px;
+    line-height: 1.2em;
+    margin-bottom: 1rem;
 }
 
 #main-btn{
-    width: 174px;
+    width: 114px;
     height: 53px;
     border-radius: 100px;
     border: 1px solid #0000;
-    font-size: 1.95rem;
+    font-size: 1.2rem;
     font-weight: 100;
     background-color: #fff;
     line-height: 0px;

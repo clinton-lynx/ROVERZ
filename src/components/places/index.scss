@@ -1,3 +1,6 @@
+@import '../../assets/styles/main.scss';
+
+
 .mainCards {
     width: 100%;
     margin-top: 1.5rem;
@@ -47,6 +50,7 @@
 
 .price-card-text {
     text-align: left;
+    font-weight: 300;
 }
 
 .text-container {
@@ -80,13 +84,31 @@ svg.UctUV {
     margin: 0 auto;
     padding-top: 2%;
     padding-left: 1%;
+
+    @include breakpoint-down($md) {
+        .top-location-container {
+            font-size: 2.5rem;
+        }
+
+    }
 }
 
-.top-location-container{
+.top-location-container {
     font-size: 3.5rem;
+    margin-top: 1.5rem;
+    margin-left: 1px;
+    margin-bottom: 0.6rem;
+    font-weight: 400;
 }
 
-.book-text{
-    font-size: 2rem;
-    margin-left: 5px;
+.book-text {
+    font-size: 1.5rem;
+    margin-left: 1px;
+    letter-spacing: 4px;
 }
+
+.card-header-text {
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+

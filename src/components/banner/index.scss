@@ -1,4 +1,18 @@
-.sub-banner-parent-container{
+@import '../../assets/styles/main.scss';
+
+.sub-banner-parent-container {
+    width: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+    background-image: url('../../assets/images/images.jpeg');
+    background-size: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+}
+
+.banner-overlay{
+    width: 100%;
+    background-color: rgba(0,0,0, 0.45);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -6,26 +20,60 @@
     max-width: 100rem;
     margin: 0 auto;
 }
-
-.banner-parent-container{
+.banner-parent-container {
     width: 100%;
-    // margin: 1% 0;
-    background-color: #000;
+    background-color: #ffe4c4;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 1;
+
+    @include breakpoint-down($md) {
+        .sub-banner-parent-container {
+            flex-direction: column;
+            align-items: baseline;
+        }
+
+        .banner-text-container {
+            width: 100%;
+        }
+
+        .banner-image-container {
+            display: none;
+        }
+
+        .banner-header-text {
+            white-space: break-spaces;
+            font-size: 3.3rem;
+            line-height: 1.5em;
+        }
+    }
 }
 
-.banner-text-container{
-    width: 48.5%;
+.banner-text-container {
+    width: 98.5%;
     margin: 1% 0.5%;
     border: 0.06em solid #ccc;
-    padding: 1% 1.25em;
+    padding: 1% 0.25rem;
     position: relative;
     // box-shadow: 2px 2px 4px 4px #fff;
-    border-style: unset ;
-    border-left:4px solid #fff;
+    border-style: unset;
 
+    @include breakpoint-down ($sm){
+        .banner-header-text{
+            font-size: 2rem;
+        }
+
+        .what-we-do-banner-header-text{
+            font-size: 1.3rem;
+        }
+
+        .what-input-content{
+            font-size: 1.4rem;
+        }
+    }
 }
 
-.banner-image-container{
+.banner-image-container {
     width: 48.5%;
     margin: 1% 0.5%;
     padding: 1%;
@@ -33,27 +81,31 @@
     align-items: center;
     justify-content: center;
 
-    img{
+    img {
         width: 100%;
         object-fit: cover;
     }
 }
 
-.banner-header-text{
+.banner-header-text {
     font-size: 5rem;
     color: #fff;
     white-space: nowrap;
+    margin-bottom: 0.5rem;
 }
 
-.what-we-do-banner-header-text{
+.what-we-do-banner-header-text {
     color: #fff;
     font-size: 2.5rem;
-    letter-spacing:3px;
-    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+    margin-bottom: 1.2rem;
 }
 
-.what-input-content{
-    font-size: 1.7rem;
-    line-height: 1.6em;
-    color: rgba(204, 204, 204, 0.541);
+.what-input-content {
+    font-size: 1.55rem;
+    line-height: 1.4em;
+    color:#fff;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    max-width: 60rem;
 }
