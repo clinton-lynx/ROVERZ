@@ -1,6 +1,7 @@
 import React from 'react'
 import './index.scss'
 
+
 const Result = () => {
     return (
         <div className="result-container">
@@ -22,19 +23,21 @@ const Result = () => {
                     <Location />
                 </div>
             </div>
+
         </div>
     )
 }
 
 const Location = () => {
     return (
-        <div className="location-card">
-            <div className="main-location-card">
-                <div className="main-card-overlay">
-                    <h1 className="card-text">National Park NYC</h1>
+        <div className="location-card" to="/properties">
+                <div className="main-location-card">
+                    <div className="main-card-overlay">
+                        <h1 className="card-text">National Park NYC</h1>
+                    </div>
                 </div>
-            </div>
         </div>
+
     )
 }
 

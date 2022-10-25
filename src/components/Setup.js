@@ -1,0 +1,23 @@
+import React from 'react';
+import Mainheader from '../components/mainheader/Mainheader'
+import Items from '../components/items/Items'
+import Banner from '../components/banner/Banner'
+import Places from '../components/places/Places'
+import Result from '../components/result/Result'
+import Ads from '../components/ads/Ads'
+import Footer from '../components/Footer/Footer'
+const Setup = () => {
+    return (
+        <div>
+            <Mainheader />
+            <Items />
+            <Banner />
+            <Places />
+            <Result />
+            <Ads />
+            <Footer />
+        </div>
+    )
+}
+
+export default Setup

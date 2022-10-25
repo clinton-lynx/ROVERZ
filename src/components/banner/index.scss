@@ -15,7 +15,7 @@
 
 .banner-overlay{
     width: 100%;
-    background-color: rgba(0,0,0, 0.45);
+    background-color: rgba(0,0,0, 0.35);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,10 +27,10 @@
 .banner-parent-container {
     width: 100%;
     // background-color: #ffe4c4;
-    margin-top: 1rem;
+    // margin-top: 1rem;
     position: relative;
     z-index: 1;
-    min-height: 50rem;
+    min-height: 38rem;
 
     @include breakpoint-down($md) {
         .sub-banner-parent-container {
@@ -51,6 +51,12 @@
             font-size: 3.3rem;
             line-height: 1.5em;
         }
+        
+
+        // .banner-parent-container{
+        //    min-height: 35rem;
+        // }
+     
     }
 }
 

@@ -1,5 +1,15 @@
+@import '../../assets/styles/main.scss';
+
 .parent-items-container{
     width: 100%;
+   
+    @include breakpoint-down ($md){
+        .general-items-container{
+            margin:0;
+            display: none;
+            line-height: 0px;
+        }
+    }
 }
 
 .sub-items-container{
@@ -83,9 +93,13 @@
 // }
 
 .general-items-container{
-    padding: 0.5%;
     width: 100%;
     max-width: 100rem;
-    margin: 1rem auto;
-    background: none;
+     margin: 0 auto;
+
+    @include breakpoint-down ($md){
+        .slick-slider{
+            display: none;
+        }
+    }
 }
