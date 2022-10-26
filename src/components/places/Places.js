@@ -3,6 +3,8 @@ import './index.scss'
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import HotplaceImg from '../places/images/image33.jpg'
+
 
 
 
@@ -50,34 +52,34 @@ const Places = () => {
             </div>
             <div className="main-slider-container">
                 <Slider {...settings}>
-                    <div>
+                    <div className="place-card-container">
                         <Maincards />
                     </div>
-                    <div>
+                    <div className="place-card-container">
                         <Maincards />
                     </div>
-                    <div>
+                    <div className="place-card-container">
                         <Maincards />
                     </div>
-                    <div>
+                    <div className="place-card-container">
                         <Maincards />
                     </div>
-                    <div>
+                    <div className="place-card-container">
                         <Maincards />
                     </div>
-                    <div>
+                    <div className="place-card-container">
                         <Maincards />
                     </div>
-                    <div>
+                    <div className="place-card-container">
                         <Maincards />
                     </div>
-                    <div>
+                    <div className="place-card-container">
                         <Maincards />
                     </div>
-                    <div>
+                    <div className="place-card-container">
                         <Maincards />
                     </div>
-                    <div>
+                    <div className="place-card-container">
                         <Maincards />
                     </div>
                 </Slider>
@@ -93,6 +95,8 @@ const Maincards = () => {
             <div className="general-mainCard">
                 <div className="first-mainCard">
                     <div className="Image-mainCard">
+                        <img src={HotplaceImg} alt="" />
+
                         <div className="overlay-mainCard">
                             <div className="like-card diff-like-card">
                                 <div className="like-main-card">

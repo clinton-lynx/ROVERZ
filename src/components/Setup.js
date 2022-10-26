@@ -6,6 +6,7 @@ import Places from '../components/places/Places'
 import Result from '../components/result/Result'
 import Ads from '../components/ads/Ads'
 import Footer from '../components/Footer/Footer'
+import Coffee from '../components/Coffee/Coffee';
 const Setup = () => {
     return (
         <div>
@@ -16,6 +17,7 @@ const Setup = () => {
             <Result />
             <Ads />
             <Footer />
+            <Coffee />
         </div>
     )
 }

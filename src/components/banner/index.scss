@@ -4,7 +4,7 @@
     width: 100%;
     max-width: 100rem;
     margin: 0 auto;
-    background-image: url('https://images.unsplash.com/photo-1664745026107-e20883cf59b7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY2NjM1NTIzMw&ixlib=rb-1.2.1&q=80&w=600');
+    background-image: url('https://i.pinimg.com/originals/81/b9/29/81b929e6a28382a53c0054e4d0bbec14.jpg');
     background-size: 100% 100%;
     object-fit: cover;
     background-repeat: no-repeat;
@@ -15,7 +15,7 @@
 
 .banner-overlay{
     width: 100%;
-    background-color: rgba(0,0,0, 0.35);
+    background-color: rgba(0,0,0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,6 +68,7 @@
     position: relative;
     // box-shadow: 2px 2px 4px 4px #fff;
     border-style: unset;
+    padding-left: 2.5rem;
 
     @include breakpoint-down ($sm){
         .banner-header-text{

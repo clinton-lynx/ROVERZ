@@ -5,6 +5,8 @@
     width: 100%;
     margin-top: 1.5rem;
     height: inherit;
+    // margin-left:1rem;
+    // margin-right: 1rem;
 }
 
 .slick-dots {
@@ -17,15 +19,20 @@
 }
 
 .main-slider-container {
-    height: 33rem;
+    height: 36rem;
     max-width: 100rem;
     margin: 0 auto;
 }
 
 .Image-mainCard {
-    background-image: url('../places/images/image33.jpg');
+    // background-image: url('../places/images/image33.jpg');
     height: inherit;
-    background-size: cover;
+    position: relative;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
 }
 
 .first-mainCard {
@@ -37,15 +44,19 @@
     height: inherit;
 }
 
+
+
 .like-card {
     height: 289px;
     padding: 3% 2%;
 }
 
 .overlay-mainCard {
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
 }
 
 .price-card-text {
@@ -55,9 +66,10 @@
 
 .text-container {
     background-color: #fff;
-    padding: 1%;
-    box-shadow: 0px 3px 5px rgb(0 0 0 / 50%);
-    border-bottom-right-radius: 50px;
+    padding: 2.5% 3.5%;
+    box-shadow: 0px 0px 5px rgb(0 0 0 / 50%);
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 
@@ -78,6 +90,7 @@ svg.UctUV {
 .parent-places-container {
     // background-color: whitesmoke;
     height: 45rem;
+    padding: 0 2.5rem;
 }
 
 .location-header-container {
@@ -112,5 +125,9 @@ svg.UctUV {
 .card-header-text {
     font-weight: 100;
     letter-spacing: 3px;
+}
+
+.place-card-container{
+    padding: 0 0.4rem;
 }
 
