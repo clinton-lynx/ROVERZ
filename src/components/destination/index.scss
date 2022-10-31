@@ -1,3 +1,6 @@
+@import '../../assets/styles/main.scss';
+
+
 .rating-number {
     text-align: left;
 }
@@ -25,6 +28,18 @@
     width: 100%;
     max-width: 47rem;
     margin-bottom: 1rem;
+
+    @include breakpoint-down($md) {
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    @include breakpoint-down($sm) {
+        .rating-logo-text-container {
+            flex-direction: column;
+            align-items: baseline;
+        }
+    }
 }
 
 .title-container {
@@ -32,74 +47,17 @@
     max-width: 100rem;
     margin: 0 auto;
     margin-top: 2.5rem;
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
 }
 
-.photo-wrapper-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 100rem;
-
-}
-
-.image-second-side {
-    width: 50%;
-    position: relative;
-    .image-second-side-overlay{
-      width: 100%;
-
-      img{
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-}
-
-
-.image-first-side{
-    width: 50%;
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    // gap: 0.5rem;
-}
-
-.container-one{
-    width: 48.5%;
-    margin: 0.5%;
-    position: relative;
-    z-index: 1;
-}
-
-.inner-container-one{
-    width: 100%;
-
-    img{
-        width: inherit;
-        object-fit: cover;
-    }
-}
-
-.title-text{
-   margin: 1.2rem 0;
-  
-}
-
-.Address{
-    text-decoration: underline;
-    font-size: 1.35rem;
-}
-
-.container-one-button{
-    padding: 3% 2%;
+.container-one-button {
+    padding: 4% 2%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    max-width: 12.5rem;
+    max-width: 9.5rem;
     position: absolute;
     bottom: 5px;
     left: 5px;
@@ -108,22 +66,283 @@
     border: 1px solid transparent;
 }
 
-.container-one-overlay{
+.diff-one-button {
+    position: absolute;
+    // transform: translateX(27rem);
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    max-width: 5rem;
+    visibility: hidden;
+}
+
+.photo-wrapper-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 100rem;
+    height: 30rem;
+    // background-color: red;
+
+    @include breakpoint-down($md) {
+
+        .image-first-side {
+            display: none;
+        }
+
+        .image-second-side {
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-second-side-overlay {
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: inherit;
+            }
+        }
+
+        .diff-one-button {
+            visibility: visible;
+        }
+
+        .rating {
+            flex-direction: column;
+            align-items: baseline;
+        }
+    }
+
+}
+
+.image-second-side {
+    width: 50%;
+    position: relative;
+    height: inherit;
+
+    .image-second-side-overlay {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+}
+
+
+.image-first-side {
+    width: 50%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    // gap: 0.5rem;
+    height: inherit;
+}
+
+.container-one {
+    width: 48.5%;
+    margin: 0.5%;
+    position: relative;
+    z-index: 1;
+    height: 48.5%;
+}
+
+.inner-container-one {
+    width: 100%;
+    height: 100%;
+
+    img {
+        width: inherit;
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
+.title-text {
+    margin: 1.2rem 0;
+
+}
+
+.Address {
+    text-decoration: underline;
+    font-size: 1.35rem;
+    text-align: left;
+}
+
+
+
+.container-one-overlay {
     position: absolute;
     top: 0;
     z-index: 2;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0, 0, 0, .8);
 }
 
-.see-all-photos{
+.see-all-photos {
     font-size: 1rem;
 }
 
-.camera-container{
+.camera-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right:  7px;
+    margin-right: 7px;
 }
+
+.diff-cont-overlay {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.map-properties {
+    width: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    margin-top: 5.78rem;
+
+    @include breakpoint-down($lg) {
+        .sub-map-properties {
+            flex-direction: column-reverse;
+            // background-color: red;
+        }
+
+        .map-container{
+            width: 100%;
+
+            .inner-map-container{
+                max-width: 66rem;
+                min-height: 37rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+       
+
+        .properties{
+            width: 100%;
+        }
+       
+
+    }
+}
+
+.property-properties {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2% 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+
+.property-header {
+    text-align: left;
+}
+
+
+.sub-map-properties {
+    width: 100%;
+}
+
+.properties {
+    width: 50%;
+}
+
+.properties-subsection {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+.section-one {
+    width: 69.5%;
+}
+
+
+.section-two {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100px;
+    }
+}
+
+.Xsld {
+    height: 30px;
+    width: 30px;
+}
+
+.sub-map-properties {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.rating-and-experience-container {
+    width: 100%;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+
+    .sub-section-rating-experience-container {
+        width: 100%;
+
+        .experience-host {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            width: 100%;
+        }
+    }
+
+
+  
+
+}
+
+.exp-header {
+    text-align: left;
+}
+
+.experience-text {
+    margin-left: 2rem;
+}
+
+
+.map-container {
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: right;
+    // position: sticky;
+
+    .inner-map-container {
+        width: 100%;
+        max-width: 37rem;
+        min-height: 43rem;
+        box-shadow: 0 6px 16px rgb(0 0 0 / 12%);
+        background-color: #fff;
+        border-radius: 15px;
+        position: sticky;
+    }
+}
+

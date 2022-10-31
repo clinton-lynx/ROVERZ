@@ -1,8 +1,40 @@
+@import '../../assets/styles/main.scss';
+
 .parent-footer-container {
     width: 100%;
-    height: 25rem;
+    min-height: 25rem;
     background-color: #000;
     // margin-top: 1.2rem;
+
+    @include breakpoint-down($md){
+        .sub-parent-footer-container{
+            flex-direction: column;
+            padding-bottom: 1.5rem;
+        }
+
+        .footer-list-items{
+            width: 100%;
+        }
+
+        .footer-email-container{
+            width: 100%;
+        }
+
+        .sub-footer-email-container{
+            padding-left: 0rem;
+        }
+    }
+
+    @include breakpoint-down($sm){
+        .footer-list-items{
+            flex-direction: column;
+        }
+
+
+        .first-footer-list-item, .second-footer-list-item, .third-footer-list-item{
+            min-width: 100%;
+        }
+    }
 }
 
 .sub-parent-footer-container {
@@ -42,8 +74,11 @@
 
 .second-footer-list-item {
     min-width: 16%;
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
 
-    li {
+    Link {
         text-decoration: none;
         list-style-type: none;
         margin: 1rem 0;
@@ -54,6 +89,7 @@
         color: #484848;
         font-weight: 700;
         font-size: 1.24rem;
+        margin: 0.6rem 0;
     }
 }
 

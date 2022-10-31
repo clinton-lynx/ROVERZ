@@ -58,7 +58,7 @@ const Location = (props) => {
                         <img src={ratingSvg} alt='' />
                     </div>
                     <div className="rating-address">
-                        <h2 className='Address-title'> 59 Saint-Laurent-des-Hommes.Aquitaine.France</h2>
+                        <h2 className='Address-title'> 59 Aquitaine.France</h2>
                     </div>
                 </div>
             </Link>

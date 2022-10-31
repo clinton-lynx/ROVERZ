@@ -101,9 +101,10 @@
     transition-duration: 1s;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     width: 100%;
     font-weight: 700;
+    padding-left: 1.5rem;
 } 
 
 .main-header-destination{
@@ -144,4 +145,8 @@
     text-align: left;
     font-size: 1.3rem;
     line-height: 1.4em;
+}
+
+.rating-address{
+    width: 100%;
 }

@@ -6,6 +6,7 @@ import FirstImg from '../destination/images/images.jpeg'
 import Ads from '../ads/Ads'
 import Footer from '../Footer/Footer'
 import Coffee from '../Coffee/Coffee'
+// import { Wrapper, Status } from "@googlemaps/react-wrapper";
 const Destination = () => {
     return (
         <>
@@ -17,7 +18,7 @@ const Destination = () => {
                         <h1 className="title-text">Beachfront apartment. Best view in Lagos!</h1>
                         <div className="rating">
                             <span className="rating-logo-text">
-                               
+
                                 <svg class="UctUV d H0" viewBox="0 0 128 24" width="68" height="12" aria-label=""><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform=""></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(26 0)"></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(52 0)"></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(78 0)"></path><path d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z" transform="translate(104 0)"></path></svg>
                                 <h3 className="rating-number">4.95</h3>
                             </span>
@@ -50,7 +51,7 @@ const Destination = () => {
                                     <img src={FirstImg} alt="" />
                                     <div className="container-one-overlay">
                                         <button className="container-one-button">
-                                            <span className="camera-container"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16"> <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/> <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/> </svg></span>
+                                            <span className="camera-container"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16"> <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z" /> <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" /> </svg></span>
                                             <span className="see-all-photos">See all photos</span>
                                         </button>
                                     </div>
@@ -59,6 +60,7 @@ const Destination = () => {
                             <div className="container-one">
                                 <div className="inner-container-one">
                                     <img src={FirstImg} alt="" />
+
                                 </div>
                             </div>
                         </div>
@@ -66,12 +68,89 @@ const Destination = () => {
                         <div className="image-second-side">
                             <div className="image-second-side-overlay">
                                 <img src={FirstImg} alt="" />
+                                <div className="container-one-overlay diff-cont-overlay">
+                                    <button className="container-one-button diff-one-button">
+                                        5/7
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
+
+            <div className="map-properties">
+                <div className="sub-map-properties">
+                    <div className="properties">
+                        <div className="properties-subsection">
+                            <div className="section-one">
+                                <h2 className="property-header">Lighthouse Resturrant hosted by Marina</h2>
+                                <ul className="property-properties">
+                                    <li><span>More than 100 guests</span></li>
+                                    <li><span>.</span></li>
+                                    <li><span>African food</span></li>
+                                    <li><span>.</span></li>
+                                    <li><span>Mexican fries</span></li>
+                                    <li><span>.</span></li>
+                                    <li><span>Chinese food</span></li>
+                                </ul>
+                            </div>
+                            <div className="section-two">
+                                <img src={FirstImg} alt="" />
+                            </div>
+                        </div>
+
+                        <div className="rating-and-experience-container">
+                            <div className="sub-section-rating-experience-container">
+                                <div className="experience-host">
+                                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" className="Xsld"><path d="M14.998 1.032a2 2 0 0 0-.815.89l-3.606 7.766L1.951 10.8a2 2 0 0 0-1.728 2.24l.031.175A2 2 0 0 0 .87 14.27l6.36 5.726-1.716 8.608a2 2 0 0 0 1.57 2.352l.18.028a2 2 0 0 0 1.215-.259l7.519-4.358 7.52 4.358a2 2 0 0 0 2.734-.727l.084-.162a2 2 0 0 0 .147-1.232l-1.717-8.608 6.361-5.726a2 2 0 0 0 .148-2.825l-.125-.127a2 2 0 0 0-1.105-.518l-8.627-1.113-3.606-7.765a2 2 0 0 0-2.656-.971zm-3.07 10.499l4.07-8.766 4.07 8.766 9.72 1.252-7.206 6.489 1.938 9.723-8.523-4.94-8.522 4.94 1.939-9.723-7.207-6.489z"></path></svg>
+
+                                    <div className="experience-text">
+                                        <h2 className="exp-header">Experience host</h2>
+                                        <p>Marina has 108 reviews for other places.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+
+                        <div className="rating-and-experience-container">
+                            <div className="sub-section-rating-experience-container">
+                                <div className="experience-host">
+                                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" className="Xsld"><path d="m26.6667.33325c2.7614237 0 5 2.23857625 5 5 0 1.31252243-.5057306 2.50692514-1.3329579 3.39897419l-.0003421 12.60097581-.0046196.2168878c-.110409 2.5868723-2.1864153 4.6647895-4.7725007 4.7782333l-.2228797.0048789-5.37965-.0007-3.95365 4.5193-3.95535-4.5193-5.378.0007-.21689009-.0046196c-2.58889537-.1104942-4.66799759-2.1896227-4.77849041-4.7784926l-.0046195-.2168878v-14.6667h2v14.6667l.00509267.1762674c.08786657 1.5164377 1.30214832 2.7307694 2.81863397 2.8186397l.17627336.0050929h6.28715l3.04585 3.4813 3.04665-3.4813h6.287c1.597725 0 2.903664-1.2489704 2.9949075-2.8237326l.0050925-.1762674-.0001078-11.2844332c-.5212771.1842357-1.0822276.2844832-1.6665922.2844832-2.7614237 0-5-2.23857625-5-5 0-.58436456.1002475-1.14531506.2844832-1.66659223l-15.2844332-.00015777-.17627336.00509271c-1.51648565.0878672-2.7307674 1.30215727-2.81863397 2.81863493l-.00509267.17502236-2 .00025.00461952-.21588934c.11040804-2.58688927 2.18639693-4.66478903 4.77249926-4.77823185l.22288122-.00487881 16.6009758-.0002921c.8920491-.82722728 2.0864518-1.3329579 3.3989742-1.3329579zm-1.1919682 2.24613101-.1437145.0668777-.062205.03189443-.162945.09259813-.1458283.0949218-.1106469.0804555-.1289779.10407113-.155155.14203386-.1448697.1524757-.1136922.13620282-.045604.05953215c-.3733536.50015804-.5943933 1.1206686-.5943933 1.79280577 0 1.65685425 1.3431458 3 3 3 .6245598 0 1.2045431-.19085456 1.6848096-.51742339l.1728464-.12676345.1564144-.13238455.1843168-.1820638.1005471-.11384792.1530375-.19855208.0480886-.0701581.0627236-.0984415.0650185-.1119245.0607666-.11593066.1075518-.24322537c.0352657-.09045929.0662674-.18304718.0927593-.27751925l.0437598-.17664562.032631-.17718882c.014177-.09256085.0241236-.18651477.0296363-.2816582l.0050927-.17627279c0-1.59768088-1.24892-2.90366088-2.8237272-2.99490731l-.1762728-.00509269-.1782955.00521057-.1957301.01787825-.0769938.01058982-.1930831.03563199-.1709809.04274164-.0945661.0283372-.0929723.03124429-.0955519.03572841z"></path></svg>
+
+                                    <div className="experience-text">
+                                        <h2 className="exp-header">Great communication</h2>
+                                        <p>90% of recent guests rated Marina 5-star in communication.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+
+                        <div className="rating-and-experience-container">
+                            <div className="sub-section-rating-experience-container">
+                                <div className="experience-host">
+                                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" className="Xsld"><path d="m11.6667 0-.00095 1.666h8.667l.00055-1.666h2l-.00055 1.666 6.00065.00063c1.0543745 0 1.9181663.81587127 1.9945143 1.85073677l.0054857.14926323v15.91907c0 .4715696-.1664445.9258658-.4669028 1.2844692l-.1188904.1298308-8.7476886 8.7476953c-.3334303.3332526-.7723097.5367561-1.2381975.5778649l-.1758207.0077398h-12.91915c-2.68874373 0-4.88181754-2.1223321-4.99538046-4.7831124l-.00461954-.2168876v-21.66668c0-1.05436021.81587582-1.91815587 1.85073739-1.99450431l.14926261-.00548569 5.999-.00063.00095-1.666zm16.66605 11.666h-24.666v13.6673c0 1.5976581 1.24893332 2.9036593 2.82372864 2.9949072l.17627136.0050928 10.999-.0003.00095-5.6664c0-2.6887355 2.122362-4.8818171 4.7832071-4.9953804l.2168929-.0046196 5.66595-.0006zm-.081 8-5.58495.0006c-1.5977285 0-2.9037573 1.2489454-2.9950071 2.8237299l-.0050929.1762701-.00095 5.5864zm-18.586-16-5.999.00062v5.99938h24.666l.00065-5.99938-6.00065-.00062.00055 1.66733h-2l-.00055-1.66733h-8.667l.00095 1.66733h-2z"></path></svg>
+                                    <div className="experience-text">
+                                        <h2 className="exp-header">Free cancellation for 48 hours.</h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                    <div className="map-container">
+                        <div className="inner-map-container">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
             <Ads />
             <Footer />
             <Coffee />

@@ -1,5 +1,6 @@
 import React from "react";
-import './index.scss'
+import './index.scss';
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
@@ -8,7 +9,7 @@ const Footer = () => {
                 <div className="footer-list-items">
                     <ul className="first-footer-list-item">
                         <h3 className="ul-header">Company</h3>
-                        <li><a href="https://staging.brooi.com/">Home</a></li>
+                        <Link  to='/'><a href="https://staging.brooi.com/">Home</a></Link>
                         <li><a href="https://staging.brooi.com/">About Us</a></li>
                         <li><a href="https://staging.brooi.com/">Contact Us</a> </li>
                         <li><a href="https://staging.brooi.com/">FAQs</a></li>
@@ -16,12 +17,12 @@ const Footer = () => {
 
                     <ul className="second-footer-list-item">
                         <h3 className="ul-header">Explore</h3>
-                        <li><a href="https://staging.brooi.com/">Amenities</a></li>
-                        <li><a href="https://staging.brooi.com/">Hotels</a></li>
-                        <li><a href="https://staging.brooi.com/">Resturants</a></li>
-                        <li><a href="https://staging.brooi.com/">Malls</a></li>
-                        <li><a href="https://staging.brooi.com/">Event Places</a></li>
-                        <li><a href="https://staging.brooi.com/">Cinemas</a></li>
+                        <Link to='/result'><a href="https://staging.brooi.com/">Amenities</a></Link>
+                        <Link to='/result'><a href="https://staging.brooi.com/">Hotels</a></Link>
+                        <Link to='/result'><a href="https://staging.brooi.com/">Resturrants</a></Link>
+                        <Link to='/result'><a href="https://staging.brooi.com/">Malls</a></Link>
+                        <Link to='/result'><a href="https://staging.brooi.com/">Event Places</a></Link>
+                        <Link to='/result'><a href="https://staging.brooi.com/">Cinemas</a></Link>
                     </ul>
 
                     <ul className="third-footer-list-item">
