@@ -15,6 +15,15 @@ import LocationEleven from '../result/images/caption11.jpg'
 import LocationTwelve from '../result/images/caption12.jpg'
 import ratingSvg from '../result/images/star (1).svg'
 const Result = () => {
+    const url = 'https://jsonplaceholder.typicode.com/users'
+    const getUsers = async() =>{
+       const response = await fetch(url)
+       const data = await response.json()
+
+       console.log(data)
+    }
+    getUsers()
+    
     return (
         <div className="result-container">
             <div className="sub-result-container">
