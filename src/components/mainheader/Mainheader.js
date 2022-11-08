@@ -2,14 +2,27 @@ import React from "react";
 import Logo from "../logo/Logo"
 import Searchbar from "../searchbar/Searchbar";
 import './index.scss'
+import { useState } from "react"
+import Sidebar from "../Sidebar/Sidebar";
 // import { Link } from 'react-router-dom'
 
 const Mainheader = () => {
+    const [navbarOpen, setNavbarOpen] = useState(false)
+    const handleToggle = () => {
+        setNavbarOpen(!navbarOpen)
+    }
+
+    const closeMenu = () => {
+        setNavbarOpen(false)
+      }
+
+
     return (
         <div className="parent-header-container">
             <div className="main-parent-sub-container">
                 <div className="sub-parent-container">
-                    <div className="humburger">
+                    <div className="humburger" onClick={handleToggle}>
+                        {navbarOpen ? <Sidebar /> : " "}
                         <svg viewBox="0 0 24 24" width="2rem" height="3rem" class="d Vb UmNoP"><path d="M2.038 4.511H22v2.496H2.038zM2 10.752h19.962v2.497H2zM2.014 16.992h19.962v2.496H2.014z"></path></svg>
                     </div>
                     <Logo />

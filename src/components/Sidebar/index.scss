@@ -8,6 +8,8 @@
     max-width: 320px;
     box-shadow: 0px 0px 3px rgba(0,0,0,0.4);
     padding: 1% ;
+    padding-top: 3rem;
+    z-index: 9;
 
     .side-bar-menu-container{
         width: 100%;
@@ -16,6 +18,7 @@
 
 .side-bar-indicator{
     width: 100%;
+    transform: translateX(-50%) translateY();
 
     .side-bar-menu-items{
         display: flex;
@@ -57,3 +60,28 @@
     }
 }
 
+
+.cancel-btn-container{
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 5px;
+    right: 16px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+
+
+    svg{
+        width: 70%;
+        height: 70%;
+    }
+}
+
+
+.cancel-btn-container:hover{
+    background-color: rgba(0,0,0,0.2);
+}
