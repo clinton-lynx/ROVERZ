@@ -4,6 +4,7 @@ import Setup from '../src/components/Setup'
 import { BrowserRouter, Route, Routes} from "react-router-dom"
 import Destination from './components/destination/Destination';
 import Generalresult from './components/genral-result/Generalresult';
+import Sidebar from './components/Sidebar/Sidebar';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path='/' element ={<Setup />}></Route>
         <Route exact path='/destination' element={<Destination />}></Route>
         <Route exact path='/result' element ={<Generalresult/>}></Route>
+        <Route exact path='/Sidebar' element = {<Sidebar />}></Route>
       </Routes>
     </BrowserRouter>
   );
