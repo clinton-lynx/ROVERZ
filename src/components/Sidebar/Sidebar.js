@@ -12,6 +12,12 @@ import { useEffect } from "react";
 
 const SidebarItems = [
     {
+        title: 'Home',
+        to: '/',
+        icons: <AmenitiesIcon.IoIosCreate />,
+        // image: ""
+    },
+    {
         title: 'Amenities',
         to: '/result',
         icons: <AmenitiesIcon.IoIosCreate />,
