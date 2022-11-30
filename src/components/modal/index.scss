@@ -1,3 +1,5 @@
+@import '../../assets/styles/main.scss';
+
 .darkBG {
   background-color: rgba(0, 0, 0, 0.7);
   width: 183vw;
@@ -25,6 +27,10 @@
   z-index: 10;
   border-radius: 16px;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+
+  @include breakpoint-down($sm){
+    width:25rem ;
+  }
 }
 
 .modalHeader {

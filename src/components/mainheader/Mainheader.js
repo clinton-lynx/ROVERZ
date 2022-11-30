@@ -4,6 +4,7 @@ import Searchbar from "../searchbar/Searchbar";
 import './index.scss'
 import { useState, useEffect } from "react"
 import Sidebar from "../Sidebar/Sidebar";
+import { Link } from "react-router-dom";
 
 
 const Mainheader = () => {
@@ -12,9 +13,9 @@ const Mainheader = () => {
         setNavbarOpen(!navbarOpen)
     }
 
-    const closeMenu = () => {
-        setNavbarOpen(false)
-    }
+    // const closeMenu = () => {
+    //     setNavbarOpen(false)
+    // }
 
 
 
@@ -50,10 +51,10 @@ const Mainheader = () => {
                 <div className="meun-content">
                     <nav className="main-menu-content">
                         <ul className="list-item-content">
-                            <li className="list-item">
+                            <Link to = "/" className="list-item">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16"> <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" /> <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" /> </svg>
                                 <span className="list-item-text">Home</span>
-                            </li>
+                            </Link>
 
                             <li className="list-item">
                                 <svg viewBox="0 0 24 24" width="24px" height="24px" class="d Vb UmNoP"><path d="M12.001 20.729s-6.741-5.85-8.485-8.003c-2.055-2.541-2.018-5.837.089-7.836a5.928 5.928 0 014.104-1.618c1.548 0 3.005.575 4.104 1.618l.174.165.162-.155a5.93 5.93 0 014.104-1.618c1.548 0 3.005.574 4.104 1.618 2.158 2.049 2.192 5.273.084 7.841-1.755 2.139-8.44 7.988-8.44 7.988zM7.709 5.271a3.935 3.935 0 00-2.727 1.068c-1.578 1.498-1.06 3.708.088 5.128 1.306 1.613 5.333 5.204 6.925 6.605 1.583-1.404 5.58-4.993 6.899-6.601 1.195-1.455 1.685-3.603.085-5.122-.726-.689-1.694-1.069-2.728-1.069s-2.001.38-2.728 1.069l-1.539 1.462-1.551-1.473a3.925 3.925 0 00-2.724-1.067z"></path></svg>

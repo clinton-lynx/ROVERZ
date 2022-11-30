@@ -4,7 +4,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import HotplaceImg from '../places/images/image33.jpg'
-
+import { Link } from "react-router-dom";
 
 
 
@@ -108,11 +108,12 @@ const Maincards = () => {
                 </div>
 
                 <div className="text-container">
-                    <h1 className="card-header-text">Lekki Conversion</h1>
+                   
                     <div className="rating-container">
                         <svg class="UctUV d H0" viewBox="0 0 128 24" width="68" height="12" aria-label=""><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform=""></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(26 0)"></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(52 0)"></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(78 0)"></path><path d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z" transform="translate(104 0)"></path></svg>
                     </div>
-                    <h3 className="price-card-text">from $139 per adult</h3>
+                    <Link to= "/result" className="card-header-text">Lekki Conversion</Link>
+                    <Link to= "/result" className="price-card-text">from $139 per adult</Link>
                 </div>
             </div>
         </div>

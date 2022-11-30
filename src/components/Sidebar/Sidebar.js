@@ -61,6 +61,7 @@ const Sidebar = () => {
     const sidebaRef = useRef()
     const indicatorRef = useRef()
     const location = useLocation()
+    
 
     useEffect(() => {
         setTimeout(() => {
@@ -108,7 +109,7 @@ const Sidebar = () => {
                 </div>
             </div>
 
-            <div className="cancel-btn-container">
+            <div className="cancel-btn-container" >
                 <Cancelbtn.AiOutlineClose/>
             </div>
         </div>

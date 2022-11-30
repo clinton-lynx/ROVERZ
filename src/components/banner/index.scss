@@ -10,12 +10,12 @@
     background-repeat: no-repeat;
     min-height: inherit;
 
-    
+
 }
 
-.banner-overlay{
+.banner-overlay {
     width: 100%;
-    background-color: rgba(0,0,0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -24,6 +24,7 @@
     margin: 0 auto;
     min-height: inherit;
 }
+
 .banner-parent-container {
     width: 100%;
     // background-color: #ffe4c4;
@@ -51,12 +52,12 @@
             font-size: 3.3rem;
             line-height: 1.5em;
         }
-        
+
 
         // .banner-parent-container{
         //    min-height: 35rem;
         // }
-     
+
     }
 }
 
@@ -70,16 +71,16 @@
     border-style: unset;
     padding-left: 2.5rem;
 
-    @include breakpoint-down ($sm){
-        .banner-header-text{
+    @include breakpoint-down ($sm) {
+        .banner-header-text {
             font-size: 2rem;
         }
 
-        .what-we-do-banner-header-text{
+        .what-we-do-banner-header-text {
             font-size: 1.3rem;
         }
 
-        .what-input-content{
+        .what-input-content {
             font-size: 1.4rem;
         }
     }
@@ -116,8 +117,40 @@
 .what-input-content {
     font-size: 1.55rem;
     line-height: 1.4em;
-    color:#fff;
+    color: #fff;
     margin-bottom: 0.5rem;
     width: 100%;
     max-width: 60rem;
 }
+
+
+
+.text-line {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: dash 5s linear forwards, filling 5s ease-in forwards;
+    font-size: 70px;
+  }
+  
+  .text-line text {
+    font-family: Helvetica,Arial,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes filling {
+    0%, 90% { fill: #fff; fill-opacity: 0; }
+    100% { fill: #fff; fill-opacity: 0; }
+  }
+
+  svg.text-line{
+    text-align: left;
+    width: 100%;
+    max-width: 38rem;
+  }

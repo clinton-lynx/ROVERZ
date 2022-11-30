@@ -62,14 +62,16 @@
 .price-card-text {
     text-align: left;
     font-weight: 300;
+    display: block;
+    margin: 0.5rem 0;
 }
 
 .text-container {
     background-color: #fff;
     padding: 2.5% 3.5%;
-    box-shadow: 0px 0px 5px rgb(0 0 0 / 50%);
-    border-bottom-right-radius: 15px;
-    border-bottom-left-radius: 15px;
+    // box-shadow: 0px 0px 5px rgb(0 0 0 / 50%);
+    // border-bottom-right-radius: 15px;
+    // border-bottom-left-radius: 15px;
 }
 
 
@@ -124,7 +126,9 @@ svg.UctUV {
 
 .card-header-text {
     font-weight: 100;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
 }
 
 .place-card-container{
