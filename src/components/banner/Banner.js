@@ -3,6 +3,8 @@ import './index.scss'
 
 
 const Banner = () => {
+  
+
     return (
         <div className="banner-parent-container">
             <div className="sub-banner-parent-container">

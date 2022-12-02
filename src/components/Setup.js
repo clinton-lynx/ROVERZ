@@ -7,6 +7,7 @@ import Result from '../components/result/Result'
 import Ads from '../components/ads/Ads'
 import Footer from '../components/Footer/Footer'
 import Coffee from '../components/Coffee/Coffee';
+import TestingUi from '../components/testingUi/TestingUi'
 const Setup = () => {
     return (
         <div>
@@ -14,10 +15,12 @@ const Setup = () => {
             <Items />
             <Banner />
             <Places />
+            <TestingUi />
             <Result />
             <Ads />
             <Footer />
             <Coffee />
+            
         </div>
     )
 }

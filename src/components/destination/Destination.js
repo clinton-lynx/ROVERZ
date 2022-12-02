@@ -2,12 +2,26 @@ import React from "react";
 import Mainheader from "../mainheader/Mainheader";
 import Items from "../items/Items"
 import './index.scss'
-import FirstImg from '../destination/images/images.jpeg'
+// import FirstImg from '../destination/images/images.jpeg'
 import Ads from '../ads/Ads'
 import Footer from '../Footer/Footer'
 import Coffee from '../Coffee/Coffee'
-// import { Wrapper, Status } from "@googlemaps/react-wrapper";
+import Places from "../places/Places";
+import { useEffect, useState } from "react";
+const imageUrl = "https://source.unsplash.com/600x600/?sig=32";
 const Destination = () => {
+    const [img, setImg] = useState();
+
+    const fetchImage = async () => {
+        const res = await fetch(imageUrl);
+        const imageBlob = await res.blob();
+        const imageObjectURL = URL.createObjectURL(imageBlob);
+        setImg(imageObjectURL);
+    };
+
+    useEffect(() => {
+        fetchImage();
+    }, []);
     return (
         <>
             <Mainheader />
@@ -38,17 +52,17 @@ const Destination = () => {
                         <div className="image-first-side">
                             <div className="container-one">
                                 <div className="inner-container-one">
-                                    <img src={FirstImg} alt="" />
+                                    <img src={img} alt="icons" />
                                 </div>
                             </div>
                             <div className="container-one">
                                 <div className="inner-container-one">
-                                    <img src={FirstImg} alt="" />
+                                    <img src={img} alt="icons" />
                                 </div>
                             </div>
                             <div className="container-one">
                                 <div className="inner-container-one">
-                                    <img src={FirstImg} alt="" />
+                                    <img src={img} alt="icons" />
                                     <div className="container-one-overlay">
                                         <button className="container-one-button">
                                             <span className="camera-container"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16"> <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z" /> <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" /> </svg></span>
@@ -59,7 +73,7 @@ const Destination = () => {
                             </div>
                             <div className="container-one">
                                 <div className="inner-container-one">
-                                    <img src={FirstImg} alt="" />
+                                    <img src={img} alt="icons" />
 
                                 </div>
                             </div>
@@ -67,7 +81,7 @@ const Destination = () => {
 
                         <div className="image-second-side">
                             <div className="image-second-side-overlay">
-                                <img src={FirstImg} alt="" />
+                                <img src={img} alt="icons" />
                                 <div className="container-one-overlay diff-cont-overlay">
                                     <button className="container-one-button diff-one-button">
                                         5/7
@@ -97,7 +111,7 @@ const Destination = () => {
                                 </ul>
                             </div>
                             <div className="section-two">
-                                <img src={FirstImg} alt="" />
+                                <img src={img} alt="icons" />
                             </div>
                         </div>
 
@@ -113,7 +127,7 @@ const Destination = () => {
                                 </div>
                             </div>
 
-                            
+
                         </div>
 
                         <div className="rating-and-experience-container">
@@ -128,29 +142,30 @@ const Destination = () => {
                                 </div>
                             </div>
 
-                            
+
                         </div>
 
                         <div className="rating-and-experience-container">
                             <div className="sub-section-rating-experience-container">
                                 <div className="experience-host">
-                                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" className="Xsld"><path d="m11.6667 0-.00095 1.666h8.667l.00055-1.666h2l-.00055 1.666 6.00065.00063c1.0543745 0 1.9181663.81587127 1.9945143 1.85073677l.0054857.14926323v15.91907c0 .4715696-.1664445.9258658-.4669028 1.2844692l-.1188904.1298308-8.7476886 8.7476953c-.3334303.3332526-.7723097.5367561-1.2381975.5778649l-.1758207.0077398h-12.91915c-2.68874373 0-4.88181754-2.1223321-4.99538046-4.7831124l-.00461954-.2168876v-21.66668c0-1.05436021.81587582-1.91815587 1.85073739-1.99450431l.14926261-.00548569 5.999-.00063.00095-1.666zm16.66605 11.666h-24.666v13.6673c0 1.5976581 1.24893332 2.9036593 2.82372864 2.9949072l.17627136.0050928 10.999-.0003.00095-5.6664c0-2.6887355 2.122362-4.8818171 4.7832071-4.9953804l.2168929-.0046196 5.66595-.0006zm-.081 8-5.58495.0006c-1.5977285 0-2.9037573 1.2489454-2.9950071 2.8237299l-.0050929.1762701-.00095 5.5864zm-18.586-16-5.999.00062v5.99938h24.666l.00065-5.99938-6.00065-.00062.00055 1.66733h-2l-.00055-1.66733h-8.667l.00095 1.66733h-2z"></path></svg>
+                                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="presentation" focusable="false" className="Xsld"><path d="m11.6667 0-.00095 1.666h8.667l.00055-1.666h2l-.00055 1.666 6.00065.00063c1.0543745 0 1.9181663.81587127 1.9945143 1.85073677l.0054857.14926323v15.91907c0 .4715696-.1664445.9258658-.4669028 1.2844692l-.1188904.1298308-8.7476886 8.7476953c-.3334303.3332526-.7723097.5367561-1.2381975.5778649l-.1758207.0077398h-12.91915c-2.68874373 0-4.88181754-2.1223321-4.99538046-4.7831124l-.00461954-.2168876v-21.66668c0-1.05436021.81587582-1.91815587 1.85073739-1.99450431l.14926261-.00548569 5.999-.00063.00095-1.666zm16.66605 11.666h-24.666v13.6673c0 1.5976581 1.24893332 2.9036593 2.82372864 2.9949072l.17627136.0050928 10.999-.0003.00095-5.6664c0-2.6887355 2.122362-4.8818171 4.7832071-4.9953804l.2168929-.0046196 5.66595-.0006zm-.081 8-5.58495.0006c-1.5977285 0-2.9037573 1.2489454-2.9950071 2.8237299l-.0050929.1762701-.00095 5.5864zm-18.586-16-5.999.00062v5.99938h24.666l.00065-5.99938-6.00065-.00062.00055 1.66733h-2l-.00055-1.66733h-8.667l.00095 1.66733h-2z"></path></svg>
                                     <div className="experience-text">
                                         <h2 className="exp-header">Free cancellation for 48 hours.</h2>
                                     </div>
                                 </div>
                             </div>
 
-                            
+
                         </div>
                     </div>
                     <div className="map-container">
                         <div className="inner-map-container">
-                            
+
                         </div>
                     </div>
                 </div>
             </div>
+            <Places />
             <Ads />
             <Footer />
             <Coffee />
