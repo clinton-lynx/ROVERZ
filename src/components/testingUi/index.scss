@@ -1,0 +1,31 @@
+.dot{
+    border: 1px solid #000;
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    background-color: #fff;
+    z-index: 10;
+}
+
+.flickity-page-dots{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    max-width: 600px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 43px;
+    border: 1px solid transparent;
+    border: none;
+    z-index: 10;
+}
+
+.flickity-enabled{
+    position: relative;
+}
+
+.flickity-previous-next-button, .previous{
+  width: 2%;
+}

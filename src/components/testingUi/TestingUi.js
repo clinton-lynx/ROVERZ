@@ -1,138 +1,83 @@
 import React from "react";
+import './index.scss'
+import Flickity from 'react-flickity-component'
 import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom'
 
 
-const slides = [
-    {
-        title: "Machu Picchu",
-        subtitle: "Peru",
-        description: "Adventure is never far away",
-        image:
-            "https://images.unsplash.com/photo-1571771019784-3ff35f4f4277?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-    },
-    {
-        title: "Chamonix",
-        subtitle: "France",
-        description: "Let your dreams come true",
-        image:
-            "https://images.unsplash.com/photo-1581836499506-4a660b39478a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-    },
-    {
-        title: "Mimisa Rocks",
-        subtitle: "Australia",
-        description: "A piece of heaven",
-        image:
-            "https://images.unsplash.com/photo-1566522650166-bd8b3e3a2b4b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-    },
-    {
-        title: "Four",
-        subtitle: "Australia",
-        description: "A piece of heaven",
-        image:
-            "https://images.unsplash.com/flagged/photo-1564918031455-72f4e35ba7a6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-    },
-    {
-        title: "Five",
-        subtitle: "Australia",
-        description: "A piece of heaven",
-        image:
-            "https://images.unsplash.com/photo-1579130781921-76e18892b57b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-    }
-];
-
-function useTilt(active) {
-    const ref = React.useRef(null);
-
-    React.useEffect(() => {
-        if (!ref.current || !active) {
-            return;
-        }
-
-        const state = {
-            rect: undefined,
-            mouseX: undefined,
-            mouseY: undefined
-        };
-
-        let el = ref.current;
-
-        const handleMouseMove = (e) => {
-            if (!el) {
-                return;
-            }
-            if (!state.rect) {
-                state.rect = el.getBoundingClientRect();
-            }
-            state.mouseX = e.clientX;
-            state.mouseY = e.clientY;
-            const px = (state.mouseX - state.rect.left) / state.rect.width;
-            const py = (state.mouseY - state.rect.top) / state.rect.height;
-
-            el.style.setProperty("--px", px);
-            el.style.setProperty("--py", py);
-        };
-
-        el.addEventListener("mousemove", handleMouseMove);
-
-        return () => {
-            el.removeEventListener("mousemove", handleMouseMove);
-        };
-    }, [active]);
-
-    return ref;
+const imageUrl = "https://source.unsplash.com/600x600/?sig=32";
+const flickityOptions = {
+    initialIndex: 3
 }
 
-const initialState = {
-    slideIndex: 0
-};
+export default function TestingUi() {
+  
+    // const [img, setImg] = useState();
 
-const slidesReducer = (state, event) => {
-    if (event.type === "NEXT") {
-        return {
-            ...state,
-            slideIndex: (state.slideIndex + 1) % slides.length
-        };
-    }
-    if (event.type === "PREV") {
-        return {
-            ...state,
-            slideIndex:
-                state.slideIndex === 0 ? slides.length - 1 : state.slideIndex - 1
-        };
-    }
-};
+    // const fetchImage = async () => {
+    //     const res = await fetch(imageUrl);
+    //     const imageBlob = await res.blob();
+    //     const imageObjectURL = URL.createObjectURL(imageBlob);
+    //     setImg(imageObjectURL);
+    // };
 
+    // useEffect(() => {
+    //     fetchImage();
+    // }, []);
 
-const TestingUi = ({ slide, offset }) => {
-
-    const active = offset === 0 ? true : null;
-    const ref = useTilt(active);
     return (
-        <div
-            ref={ref}
-            className="slide"
-            data-active={active}
-            style={{
-                "--offset": offset,
-                "--dir": offset === 0 ? 0 : offset > 0 ? 1 : -1
-            }}
+        <Flickity
+            className={'carousel'} // default ''
+            elementType={'div'} // default 'div'
+            options={flickityOptions} // takes flickity options {}
+            disableImagesLoaded={false} // default false
+            reloadOnUpdate // default false
+            static // default false
         >
-            <div
-                className="slideBackground"
-                style={{
-                    backgroundImage: `url('${slide.image}')`
-                }}
-            />
-            <div
-                className="slideContent"
-                style={{
-                    backgroundImage: `url('${slide.image}')`
-                }}
-            >
-                <div className="slideContentInner">
-                    <h2 className="slideTitle">{slide.title}</h2>
-                    <h3 className="slideSubtitle">{slide.subtitle}</h3>
-                    <p className="slideDescription">{slide.description}</p>
+           <Maincard />
+           <Maincard />
+           <Maincard />
+           <Maincard />
+           <Maincard />
+        </Flickity>
+    )
+}
+
+
+const Maincard = (props) => {
+
+    const [img, setImg] = useState();
+
+    const fetchImage = async () => {
+        const res = await fetch(imageUrl);
+        const imageBlob = await res.blob();
+        const imageObjectURL = URL.createObjectURL(imageBlob);
+        setImg(imageObjectURL);
+    };
+
+    useEffect(() => {
+        fetchImage();
+    }, []);
+    return (
+        <div className="Card-general-container-one">
+            <div className="first-mainCard-one">
+                <div className="Image-mainCard-one">
+                    <img src={img} alt="icons" />
+                </div>
+
+                <div className="like-card-one diff-like-card-one">
+                    <div className="like-main-card-one">
+                        <svg viewBox="0 0 24 24" width="24px" height="24px" class="d Vb UmNoP"><path d="M12.001 20.729s-6.741-5.85-8.485-8.003c-2.055-2.541-2.018-5.837.089-7.836a5.928 5.928 0 014.104-1.618c1.548 0 3.005.575 4.104 1.618l.174.165.162-.155a5.93 5.93 0 014.104-1.618c1.548 0 3.005.574 4.104 1.618 2.158 2.049 2.192 5.273.084 7.841-1.755 2.139-8.44 7.988-8.44 7.988zM7.709 5.271a3.935 3.935 0 00-2.727 1.068c-1.578 1.498-1.06 3.708.088 5.128 1.306 1.613 5.333 5.204 6.925 6.605 1.583-1.404 5.58-4.993 6.899-6.601 1.195-1.455 1.685-3.603.085-5.122-.726-.689-1.694-1.069-2.728-1.069s-2.001.38-2.728 1.069l-1.539 1.462-1.551-1.473a3.925 3.925 0 00-2.724-1.067z"></path></svg>
+                    </div>
+                </div>
+
+                <div className="text-container-one">
+
+                    <div className="rating-container-one">
+                        <svg class="UctUV d H0" viewBox="0 0 128 24" width="68" height="12" aria-label=""><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform=""></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(26 0)"></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(52 0)"></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(78 0)"></path><path d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z" transform="translate(104 0)"></path></svg>
+                    </div>
+                    <Link to="/result" className="card-header-text-one">Lekki Conversion</Link>
+                    <Link to="/result" className="price-card-text-one">from $139 per adult</Link>
                 </div>
             </div>
         </div>
