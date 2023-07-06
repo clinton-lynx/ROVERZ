@@ -1,0 +1,39 @@
+@import '../../assets/styles/main.scss';
+
+
+@keyframes Slides {
+    from{
+        transform:translateX(0)
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.Parent-scrolling-text-container {
+
+    overflow: hidden;
+    width: 100%;
+    max-width: 140rem;
+    margin: 0 auto;
+    z-index: 9999999999999;
+    white-space: nowrap;
+    
+
+    .Sponsor-logo-container {
+        background-color: #cabc19;
+        width: 100%;
+        display: inline-block;
+        animation: 15s Slides infinite linear;
+
+        .Inner-sponsor-logo-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 1%;
+        }
+    }
+       
+
+}
+

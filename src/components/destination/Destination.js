@@ -8,6 +8,10 @@ import Footer from '../Footer/Footer'
 import Coffee from '../Coffee/Coffee'
 import Places from "../places/Places";
 import { useEffect, useState } from "react";
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+
+
+
 const imageUrl = "https://source.unsplash.com/600x600/?sig=32";
 const Destination = () => {
     const [img, setImg] = useState();
@@ -22,6 +26,10 @@ const Destination = () => {
     useEffect(() => {
         fetchImage();
     }, []);
+
+
+
+
     return (
         <>
             <Mainheader />
@@ -159,9 +167,7 @@ const Destination = () => {
                         </div>
                     </div>
                     <div className="map-container">
-                        <div className="inner-map-container">
-
-                        </div>
+                       
                     </div>
                 </div>
             </div>

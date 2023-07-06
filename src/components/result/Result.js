@@ -65,6 +65,8 @@ const Location = (props) => {
         const imageBlob = await res.blob();
         const imageObjectURL = URL.createObjectURL(imageBlob);
         setImg(imageObjectURL);
+
+        
     };
 
     useEffect(() => {

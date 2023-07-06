@@ -13,13 +13,6 @@ const Mainheader = () => {
         setNavbarOpen(!navbarOpen)
     }
 
-    // const closeMenu = () => {
-    //     setNavbarOpen(false)
-    // }
-
-
-
-    // Sticky Menu Area
     useEffect(() => {
         window.addEventListener('scroll', isSticky);
         return () => {
