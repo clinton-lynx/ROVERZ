@@ -27,7 +27,7 @@
 }
 
 .main-slider-container {
-    height: 30rem;
+    height: 26rem;
     max-width: 100rem;
     margin: 0 auto;
 }
@@ -157,4 +157,18 @@ svg.UctUV {
 
 .like-card diff-like-card{
     background-color: rgba(0, 0, 0, 0.3);
+}
+
+.Rating-container {
+
+    display: flex;
+    align-items: baseline;
+    justify-content: left !important;
+
+    svg {
+        height: 14px;
+        width: 14px;
+        fill: #febb02;
+        margin: 0 1%;
+    }
 }

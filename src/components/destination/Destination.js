@@ -2,13 +2,13 @@ import React from "react";
 import Mainheader from "../mainheader/Mainheader";
 import Items from "../items/Items"
 import './index.scss'
-// import FirstImg from '../destination/images/images.jpeg'
 import Ads from '../ads/Ads'
 import Footer from '../Footer/Footer'
 import Coffee from '../Coffee/Coffee'
 import Places from "../places/Places";
 import { useEffect, useState } from "react";
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+import mapImage from '../destination/images/staticmap.jpg'
 
 
 
@@ -37,21 +37,75 @@ const Destination = () => {
             <div className="photo-card-container">
                 <div className="title-container">
                     <div className="image-rating-container">
-                        <h1 className="title-text">Beachfront apartment. Best view in Lagos!</h1>
-                        <div className="rating">
-                            <span className="rating-logo-text">
+                        <div className="title-rating-main-container">
+                            <h1 className="title-text">Beachfront apartment. Best view in Lagos!</h1>
+                            <div className="rating">
+                                <span className="rating-logo-text">
+                                    <h3 className="rating-number">4.95</h3>
+                                    <div className="Rating-container">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.555 8.729a1.505 1.505 0 0 0-1.406-.98h-6.087a.5.5 0 0 1-.472-.334l-2.185-6.193a1.5 1.5 0 0 0-2.81 0l-.005.016-2.18 6.177a.5.5 0 0 1-.471.334H1.85A1.5 1.5 0 0 0 .887 10.4l5.184 4.3a.5.5 0 0 1 .155.543l-2.178 6.531a1.5 1.5 0 0 0 2.31 1.684l5.346-3.92a.5.5 0 0 1 .591 0l5.344 3.919a1.5 1.5 0 0 0 2.312-1.683l-2.178-6.535a.5.5 0 0 1 .155-.543l5.194-4.306a1.5 1.5 0 0 0 .433-1.661z"></path></svg>
 
-                                <svg class="UctUV d H0" viewBox="0 0 128 24" width="68" height="12" aria-label=""><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform=""></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(26 0)"></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(52 0)"></path><path d="M 12 0C5.388 0 0 5.388 0 12s5.388 12 12 12 12-5.38 12-12c0-6.612-5.38-12-12-12z" transform="translate(78 0)"></path><path d="M 12 0C5.389 0 0 5.389 0 12c0 6.62 5.389 12 12 12 6.62 0 12-5.379 12-12S18.621 0 12 0zm0 2a9.984 9.984 0 0110 10 9.976 9.976 0 01-10 10z" transform="translate(104 0)"></path></svg>
-                                <h3 className="rating-number">4.95</h3>
-                            </span>
-                            <span>.</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.555 8.729a1.505 1.505 0 0 0-1.406-.98h-6.087a.5.5 0 0 1-.472-.334l-2.185-6.193a1.5 1.5 0 0 0-2.81 0l-.005.016-2.18 6.177a.5.5 0 0 1-.471.334H1.85A1.5 1.5 0 0 0 .887 10.4l5.184 4.3a.5.5 0 0 1 .155.543l-2.178 6.531a1.5 1.5 0 0 0 2.31 1.684l5.346-3.92a.5.5 0 0 1 .591 0l5.344 3.919a1.5 1.5 0 0 0 2.312-1.683l-2.178-6.535a.5.5 0 0 1 .155-.543l5.194-4.306a1.5 1.5 0 0 0 .433-1.661z"></path></svg>
 
-                            <span className="rating-logo-text-container">
-                                <h4>Location</h4>
-                                <span>.</span>
-                                <h3 className="Address">Saint-Laurent-des-Hommes.Aquitaine.France</h3>
-                            </span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.555 8.729a1.505 1.505 0 0 0-1.406-.98h-6.087a.5.5 0 0 1-.472-.334l-2.185-6.193a1.5 1.5 0 0 0-2.81 0l-.005.016-2.18 6.177a.5.5 0 0 1-.471.334H1.85A1.5 1.5 0 0 0 .887 10.4l5.184 4.3a.5.5 0 0 1 .155.543l-2.178 6.531a1.5 1.5 0 0 0 2.31 1.684l5.346-3.92a.5.5 0 0 1 .591 0l5.344 3.919a1.5 1.5 0 0 0 2.312-1.683l-2.178-6.535a.5.5 0 0 1 .155-.543l5.194-4.306a1.5 1.5 0 0 0 .433-1.661z"></path></svg>
 
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.555 8.729a1.505 1.505 0 0 0-1.406-.98h-6.087a.5.5 0 0 1-.472-.334l-2.185-6.193a1.5 1.5 0 0 0-2.81 0l-.005.016-2.18 6.177a.5.5 0 0 1-.471.334H1.85A1.5 1.5 0 0 0 .887 10.4l5.184 4.3a.5.5 0 0 1 .155.543l-2.178 6.531a1.5 1.5 0 0 0 2.31 1.684l5.346-3.92a.5.5 0 0 1 .591 0l5.344 3.919a1.5 1.5 0 0 0 2.312-1.683l-2.178-6.535a.5.5 0 0 1 .155-.543l5.194-4.306a1.5 1.5 0 0 0 .433-1.661z"></path></svg>
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.555 8.729a1.505 1.505 0 0 0-1.406-.98h-6.087a.5.5 0 0 1-.472-.334l-2.185-6.193a1.5 1.5 0 0 0-2.81 0l-.005.016-2.18 6.177a.5.5 0 0 1-.471.334H1.85A1.5 1.5 0 0 0 .887 10.4l5.184 4.3a.5.5 0 0 1 .155.543l-2.178 6.531a1.5 1.5 0 0 0 2.31 1.684l5.346-3.92a.5.5 0 0 1 .591 0l5.344 3.919a1.5 1.5 0 0 0 2.312-1.683l-2.178-6.535a.5.5 0 0 1 .155-.543l5.194-4.306a1.5 1.5 0 0 0 .433-1.661z"></path></svg>
+
+                                    </div>
+
+
+
+                                    <span className="rating-logo-text-container">
+                                        <h4>Location</h4>
+                                        <span>.</span>
+                                        <h3 className="Address">Saint-Laurent-des-Hommes.Aquitaine.France</h3>
+                                    </span>
+                                </span>
+
+
+                            </div>
+
+
+                            <div className="share-like-container">
+                                <div className="share-like-inner-container">
+                                    <button>
+                                        <svg name="shareIos" class="HotelIcon-sc-7gzcmw-0 SaveShareButtonGroup__ShareIcon-sc-vo9yt2-3 juOajA fGYjyb" viewBox="0 0 24 24" width="18" height="18" fill="currentcolor" data-unit-id="renderIcon"><path d="M 12 2 C 11.79525 2 11.590094 2.078375 11.433594 2.234375 L 9.0332031 4.6347656 C 8.8042031 4.8637656 8.7383281 5.2058594 8.8613281 5.5058594 C 8.9853281 5.8048594 9.2766094 6 9.5996094 6 L 11 6 L 11 17 A 1.0001 1.0001 0 1 0 13 17 L 13 6 L 14.400391 6 C 14.723391 6 15.014672 5.8048594 15.138672 5.5058594 C 15.179672 5.4068594 15.199219 5.3022188 15.199219 5.1992188 C 15.199219 4.9912187 15.119797 4.7887656 14.966797 4.6347656 L 12.566406 2.234375 C 12.409906 2.078375 12.20475 2 12 2 z M 6 7 C 4.9069372 7 4 7.9069372 4 9 L 4 20 C 4 21.093063 4.9069372 22 6 22 L 18 22 C 19.093063 22 20 21.093063 20 20 L 20 9 C 20 7.9069372 19.093063 7 18 7 L 17 7 A 1.0001 1.0001 0 1 0 17 9 L 18 9 L 18 20 L 6 20 L 6 9 L 7 9 A 1.0001 1.0001 0 1 0 7 7 L 6 7 z"></path></svg>
+
+                                        Share
+                                    </button>
+
+
+                                    <button className="Diff-button">
+                                        <svg viewBox="0 0 24 24" width="18px" height="18px" class="d Vb UmNoP" className="like-svg-icon"><path d="M12.001 20.729s-6.741-5.85-8.485-8.003c-2.055-2.541-2.018-5.837.089-7.836a5.928 5.928 0 014.104-1.618c1.548 0 3.005.575 4.104 1.618l.174.165.162-.155a5.93 5.93 0 014.104-1.618c1.548 0 3.005.574 4.104 1.618 2.158 2.049 2.192 5.273.084 7.841-1.755 2.139-8.44 7.988-8.44 7.988zM7.709 5.271a3.935 3.935 0 00-2.727 1.068c-1.578 1.498-1.06 3.708.088 5.128 1.306 1.613 5.333 5.204 6.925 6.605 1.583-1.404 5.58-4.993 6.899-6.601 1.195-1.455 1.685-3.603.085-5.122-.726-.689-1.694-1.069-2.728-1.069s-2.001.38-2.728 1.069l-1.539 1.462-1.551-1.473a3.925 3.925 0 00-2.724-1.067z"></path></svg>
+                                        save & track prices
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="price-contact-container">
+                            <div className="price-container">
+                                <div className="dollar-symbol-container">
+                                    <span className="dollar-sign">$</span>
+                                    <span className="price-number">1,456</span>
+                                </div>
+                                <h2>Price per night</h2>
+                            </div>
+
+                            <div className="contact-number">
+                                <div className="phone-icon-number-container">
+                                    <div className="icon-container">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" aria-hidden="true" fill="currentcolor" color="primary.base" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 gHvJpT Phone__SvgPhone-sc-q5t8us-0 brELPL"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.5 0 1 .4 1 1V20c0 .5-.5 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"></path></svg>
+                                    </div>
+                                    <div className="number-container">
+                                        <p className="number-text">Call for great rates</p>
+                                        <p className="contact-num"> 1 (833) 657-0400</p>
+                                    </div>
+                                </div>
+                            </div>
 
                         </div>
                     </div>
@@ -167,7 +221,12 @@ const Destination = () => {
                         </div>
                     </div>
                     <div className="map-container">
-                       
+                        <div className="inner-map-image">
+                            <img src={mapImage} alt="" />
+                        </div>
+                        <div className="main-map-overlay">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
