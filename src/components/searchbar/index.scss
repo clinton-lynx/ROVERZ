@@ -12,14 +12,14 @@
     &:focus,
     &:hover {
       .search-path {
-        stroke: #299ecc;
+        stroke: #006CE4;
       }
     }
   
     /* On click: thicker black strokes  */
     &:active {
       .search-path {
-        stroke: #111516;
+        stroke: #006CE4;
         stroke-width: 2px;
       }
     }
@@ -43,11 +43,16 @@
     padding: 0 1%;
     width: 100%;
     border-radius: 50px;
-    box-shadow: 0 4px 4px rgb(0 0 0 / 40%);
+    box-shadow: 0 4px 4px rgba(0,0,0,0.4);
     margin-left: 5px;
     margin-right: 5px;
-
+    transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
   
+  }
+
+
+  .parent-search-bar-container:focus{
+    max-width: 37rem;
   }
 
   input.input-search-container{

@@ -14,6 +14,12 @@
         display: flex;
         align-items: flex-start;
         // justify-content: space-between;
+
+        @include breakpoint-down ($xl) {
+            .Side-filter-bar {
+                display: none
+            }
+        }
     }
 }
 
@@ -53,6 +59,11 @@
     }
 }
 
+.First-filter-section {
+    border-bottom: 1px solid #c6c6c6;
+}
+
+
 .Filters {
     width: 100%;
     display: flex;
@@ -62,24 +73,25 @@
     height: 25px;
     margin: 2% 0;
 
-   .Checkbox-text-container{
-    display: flex;
-    align-items: center;
-    width: 100%;
+    .Checkbox-text-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
 
-    .filter-option-text{
-        margin: 0 5px;
-        font-size: 16px;
+        .filter-option-text {
+            margin: 0 5px;
+            font-size: 16px;
+        }
     }
-   } 
 }
 
 
-input.Larger{
+input.Larger {
     width: 20px;
     height: 18px;
 }
-.Number-available-text{
+
+.Number-available-text {
     font-size: 13px;
     font-weight: 100;
 }
@@ -99,41 +111,45 @@ input.Larger{
         padding: 2%;
         display: flex;
         align-items: flex-start;
-        
+
     }
 }
 
 
-.Image-general-container{
+.Image-general-container {
     min-height: 15rem;
     min-width: 15rem;
     position: relative;
 }
 
-.Image-container{
+.Image-container {
     width: 100%;
     max-width: 15rem;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     min-height: inherit;
+    z-index: 0;
 
-    Img{
+
+    Img {
         width: inherit;
         min-height: inherit;
         object-fit: contain;
+        z-index: 0;
     }
 }
 
 
-.Image-container-overlay{
+.Image-container-overlay {
     width: 100%;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
     top: 0;
     min-height: inherit;
     padding: 2%;
+    z-index: 0;
 }
 
-.like-container{
+.like-container {
     width: 40px;
     height: 40px;
     background-color: #fff;
@@ -143,7 +159,7 @@ input.Larger{
     justify-content: center;
 }
 
-.Location-general-info-container{
+.Location-general-info-container {
     margin: 0px 1.5rem;
     width: 100%;
     display: flex;
@@ -151,25 +167,25 @@ input.Larger{
     justify-content: space-between;
 
 
-    .Location-Name{
-        color:#006ce4;
+    .Location-Name {
+        color: #006ce4;
         font-size: 1.5rem;
         font-weight: 700;
     }
 
-    .Location-inner-container{
+    .Location-inner-container {
         width: 70%;
     }
 }
 
 
-.Rating-container{
+.Rating-container {
 
     display: flex;
     align-items: baseline;
     justify-content: center;
 
-    svg{
+    svg {
         height: 14px;
         width: 14px;
         fill: #febb02;
@@ -177,7 +193,7 @@ input.Larger{
     }
 }
 
-.Location-name-rating{
+.Location-name-rating {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -186,39 +202,40 @@ input.Larger{
 }
 
 
-.address-on-map{
+.address-on-map {
     text-decoration: underline;
     color: #006ce4;
     font-weight: 500;
     margin-bottom: 1%;
 }
 
-.Distance{
+.Distance {
     margin-bottom: 1%;
 }
 
-.Map-text{
+.Map-text {
     color: #006ce4;
 }
 
-.about-location{
+.about-location {
     margin-top: 1rem;
-    p{
+
+    p {
         line-height: 1.5em;
     }
 }
 
-.Diff-box{
-    box-shadow: 0 0 8px #a3d7fc !important;
+.Diff-box {
+    box-shadow: 0 0 8px #a3d7fc;
 }
 
-.middle-section{
+.middle-section {
     border-top: 1px solid #c6c6c6;
     border-bottom: 1px solid #c6c6c6;
-    
+
 }
 
-.review-price-container{
+.review-price-container {
     width: 30%;
     height: 100%;
     display: flex;
@@ -227,7 +244,7 @@ input.Larger{
     justify-content: end;
 
 
-    h2{
+    h2 {
         color: #006ce4;
         font-size: 14px;
         font-weight: 700;
@@ -235,44 +252,44 @@ input.Larger{
     }
 }
 
-.reviews-rating{
+.reviews-rating {
     display: flex;
     align-items: flex-start;
     justify-content: end;
     width: 100%
 }
 
-.Main-rating{
+.Main-rating {
     width: 40px;
     height: 40px;
-    background-color:#003b95;
+    background-color: #003b95;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 1%;
     border-radius: 5px;
 
-    h2{
+    h2 {
         color: #fff;
     }
 }
 
-.rating-text{
+.rating-text {
     display: flex;
     align-items: center;
     justify-content: end;
     flex-direction: column;
 
-    h1{
+    h1 {
         font-size: 18px;
     }
 }
 
-.show-price-button{
-   background-color: #006ce4 ;
-   color: #fff;
-   font-weight: 500;
-   padding: 2% 1%;
-   border-radius: 5px;
-   border: 1px solid transparent;
+.show-price-button {
+    background-color: #006ce4;
+    color: #fff;
+    font-weight: 500;
+    padding: 11px 28px;
+    border-radius: 5px;
+    border: 1px solid transparent;
 }

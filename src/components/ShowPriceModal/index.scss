@@ -1,0 +1,363 @@
+@import '../../assets/styles/main.scss';
+
+
+.modal-centered {
+    position: fixed;
+    top: 50%;
+    left: 70%;
+    transform: translate(-40%, -40%);
+}
+
+.main-modal {
+    width: 20rem;
+    height: 26rem;
+    background: white;
+    color: white;
+    z-index: 100;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px 0 #a3d7fc;
+
+
+    @include breakpoint-down($sm) {
+        width: 25rem;
+    }
+}
+
+.new-rating-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+
+    svg {
+        height: 14px;
+        width: 14px;
+        fill: #febb02;
+        margin: 0 3px;
+    }
+}
+
+.property-strength {
+    margin-right: 5px;
+}
+
+.modalHeader-container {
+    height: 50px;
+    background: white;
+    overflow: hidden;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.venue-heading {
+    margin: 0;
+    padding: 10px;
+    color: #2c3e50;
+    font-weight: 800;
+    font-size: 2.34rem !important;
+    text-align: center;
+}
+
+.modalContent-container {
+    padding: 10px;
+    font-size: 14px;
+    color: #2c3e50;
+    width: 100%;
+
+
+    .rating-rating-icon-container {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+}
+
+
+.price-info {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    .Price-tag {
+        font-weight: 100;
+    }
+}
+
+.distance-of-location{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+    p{
+        color: #006CE4;
+        font-weight: 700;
+    }
+}
+
+
+
+.modalActions {
+    position: absolute;
+    bottom: 2px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.actionsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1px 1.9rem;
+}
+
+.closeBtn {
+    cursor: pointer;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+    color: #2c3e50;
+    background: white;
+    transition: all 0.25s ease;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
+    position: absolute;
+    right: 0;
+    top: 0;
+    align-self: flex-end;
+    margin-top: -7px;
+    margin-right: -7px;
+}
+
+.closeBtn:hover {
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+    transform: translate(-4px, 4px);
+}
+
+.MapBtn {
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 8px 28px;
+    border-radius: 12px;
+    font-size: 1.12rem;
+    border: none;
+    color: #fff;
+    background: #fff;
+    transition: all 0.25s ease;
+}
+
+.deleteBtn:hover {
+    box-shadow: 0 10px 20px -10px rgba(255, 62, 78, 0.6);
+    transform: translateY(-5px);
+    background: #ff3e4e;
+}
+
+.cancelBtn {
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 11px 28px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    border: none;
+    color: #2c3e50;
+    background: #fcfcfc;
+    transition: all 0.25s ease;
+}
+
+.cancelBtn:hover {
+    box-shadow: none;
+    transform: none;
+    background: whitesmoke;
+}
+
+.Buy-me-a-coffee-form {
+    width: 100%;
+    padding: 2.5% 1rem;
+    text-align: left;
+}
+
+.Contact-Info {
+    text-align: left;
+    font-weight: 100;
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+
+.Contact-info-email {
+    width: 100%;
+    padding: 2.5% 2%;
+    margin: 1rem 0;
+    outline: none;
+}
+
+.check-box-text {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: left;
+    height: 50px;
+}
+
+.Email-me-with-news {
+    margin-top: 1rem;
+}
+
+#first-input {
+    width: 50%;
+    padding: 2.5% 2%;
+    outline: none;
+}
+
+#second-input {
+    width: 50%;
+    padding: 2.5% 2%;
+    outline: none;
+}
+
+.Adress-cont {
+    width: 100%;
+    margin: 1rem 0;
+
+    #third-input {
+        width: inherit;
+        padding: 2.5% 2%;
+        outline: none;
+    }
+}
+
+
+
+.dual-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.7rem;
+}
+
+.Shopay {
+    width: 100%;
+    max-width: 116px;
+}
+
+
+.gpay-button-fill {
+    width: 33.33%;
+}
+
+.gpay-button {
+    width: 100%;
+    padding: 3.5% 2.5%;
+    border: 1px solid transparent;
+
+    border-radius: 8px;
+    background-color: #000;
+    height: 40px;
+}
+
+.yellow {
+    background-color: #ffc439;
+}
+
+.payment-companies {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 70px;
+    gap: 0.5rem;
+    padding: 1.5rem 0.5rem;
+    border-radius: 8px;
+    position: relative;
+    // border: 1px solid #000;
+    margin-top: 1.5rem;
+    box-shadow: 2px 2px 9px rgb(0 0 0 / 50%);
+
+    a {
+        width: 33%;
+        height: 40px;
+        background: #9370db;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        /* padding: 2%; */
+        padding: 2% 1%;
+    }
+}
+
+.experess-checkout {
+    background-color: #fff;
+    position: absolute;
+    width: 100%;
+    max-width: 9rem;
+    transform: translate(11.7rem, -4px);
+    top: -5px;
+}
+
+.payment-container {
+    padding: 0px 1.5rem;
+}
+
+.header-svg {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+}
+
+.price-map-container{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 10px;
+    border-radius: 16px;
+
+    .main-map-wrapper{
+        width: 100%;
+        height: inherit;
+        border-radius: 16px;
+
+        img{
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+    }
+}
+
+.map-overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: inherit;
+    border-radius: 16px;
+    
+}
+
+.Map-view-btn{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 8px 18px;
+    z-index: 10;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+
+
+    p{
+        color: rgb(0, 104, 239);
+    }
+}
