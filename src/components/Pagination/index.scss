@@ -1,0 +1,73 @@
+@import '../../assets/styles/main.scss';
+
+.general-pagination-container {
+    width: 100%;
+    min-height: 5rem;
+    max-height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    border: 1px solid #e7e7e7;
+    border-radius: 5px;
+}
+
+.inner-page-container{
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.previous-icon {
+    display: block;
+    fill: none;
+    height: 16px;
+    width: 16px;
+    stroke: currentcolor;
+    stroke-width: 3;
+    overflow: visible;
+    color: #ddd;
+    background-color: transparent;
+    border: 1px solid transparent;
+
+}
+
+.next-icon {
+    display: block;
+    fill: none;
+    height: 16px;
+    width: 16px;
+    stroke: currentcolor;
+    stroke-width: 3;
+    overflow: visible;
+}
+
+
+.current-page-button{
+    height: 40px;
+    width: 40px;
+    border-radius: 100px;
+    background-color: #006ce4;
+    border: 1px solid transparent;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+.page-number{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #222;
+    font-size: 16px;
+}
+
+.page-number:hover{
+   background-color: rgb(232, 242, 255);
+}

@@ -5,9 +5,6 @@
     width: 100%;
     max-width: 100rem;
     margin: 0 auto;
-    // display: flex;
-    // align-items: flex-start;
-    // justify-content: space-between;
 
     .Sub-parent-main-filter-result-container {
         width: inherit;
@@ -165,7 +162,9 @@ input.Larger {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    flex-direction: row;
 
+   
 
     .Location-Name {
         color: #006ce4;
@@ -176,6 +175,42 @@ input.Larger {
     .Location-inner-container {
         width: 70%;
     }
+
+    @include breakpoint-down ($md) {
+        flex-direction: column;
+        width: 100%;
+
+        .review-price-container {
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            flex-direction: row;
+
+            
+            h2.loct-text-dol{
+                display: none;
+            }
+        }
+
+        .reviews-rating {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            width: 100%;
+            max-width: 10rem;
+
+        }
+
+        .Location-inner-container{
+            width: 100%;
+            margin-bottom: 8px;
+        }
+
+        .Image-general-container{
+            min-height: 16rem;
+        }
+    }
+
 }
 
 
@@ -254,7 +289,7 @@ input.Larger {
 
 .reviews-rating {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: end;
     width: 100%
 }
@@ -262,12 +297,12 @@ input.Larger {
 .Main-rating {
     width: 40px;
     height: 40px;
-    background-color: #003b95;
+    background-color: rgb(246, 128, 19);
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 1%;
-    border-radius: 5px;
+    border-radius: 100px;
 
     h2 {
         color: #fff;
@@ -282,7 +317,15 @@ input.Larger {
 
     h1 {
         font-size: 18px;
+        font-weight: 700;
     }
+}
+
+
+h2.loct-text-dol{
+    color: #00AA00;
+    font-size: 16px;
+    font-weight: 100;
 }
 
 .show-price-button {
@@ -292,4 +335,82 @@ input.Larger {
     padding: 11px 28px;
     border-radius: 5px;
     border: 1px solid transparent;
+}
+
+.grid-stack {
+    border: 1px solid #d5d8db;
+    border-radius: 4px;
+    max-width: 78px;
+}
+
+.grid-view {
+    padding: 0.3rem 0.8rem;
+    border-bottom-right-radius: 4px;
+    border-left: 0.5px solid #d5d8db;
+    border-top-right-radius: 4px;
+    background-color: #fff;
+    border: none;
+}
+
+.stack-view {
+    padding: 0.3rem 0.8rem;
+    border-bottom-left-radius: 4px;
+    border-right: 0.5px solid #d5d8db;
+    border-top-left-radius: 4px;
+    border: none;
+}
+
+.filter-result-number-layout {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .grid-stack-layout {
+        width: 100%;
+        max-width: 17rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            font-weight: 100;
+            color: #6c7780;
+        }
+    }
+}
+
+.selected-side-bar-options {
+    width: 100%;
+    margin: 10px 0;
+
+    .inner-side-bar-options {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        button {
+            margin: 2px 5px;
+            padding: 6px 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #003b95;
+            border-radius: 999px;
+            font-size: 16px;
+            color: #003b95;
+            background-color: rgb(232, 242, 255);
+            font-weight: 600;
+            white-space: nowrap;
+            min-width: 12%;
+
+            svg {
+                width: 16px;
+                height: 17px;
+                margin: 0 5px;
+                color: #003b95;
+            }
+        }
+    }
 }
