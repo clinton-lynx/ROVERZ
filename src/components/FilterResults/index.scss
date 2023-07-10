@@ -3,8 +3,9 @@
 
 .Parent-main-filter-result-container {
     width: 100%;
-    max-width: 100rem;
+    max-width: 98.5rem;
     margin: 0 auto;
+    padding: 0 1.5rem;
 
     .Sub-parent-main-filter-result-container {
         width: inherit;
@@ -22,8 +23,8 @@
 
 
 .Side-filter-bar {
-    width: 24%;
-    margin: 1%;
+    width: 100%;
+    max-width: 269px;
     background-color: #fff;
     border: 1px solid #c6c6c6;
     border-top-left-radius: 10px;

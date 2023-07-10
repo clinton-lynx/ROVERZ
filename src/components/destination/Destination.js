@@ -7,8 +7,10 @@ import Footer from '../Footer/Footer'
 import Coffee from '../Coffee/Coffee'
 import Places from "../places/Places";
 import { useEffect, useState } from "react";
-import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
-import mapImage from '../destination/images/staticmap.jpg'
+import HotDeals from "../HotDeals/hotDeals";
+// import { useLoadScript, GoogleMap, Marker } from '@react-google-maps/api';
+// import mapImage from '../destination/images/staticmap.jpg'
+
 
 
 
@@ -22,6 +24,10 @@ const Destination = () => {
         const imageObjectURL = URL.createObjectURL(imageBlob);
         setImg(imageObjectURL);
     };
+
+    // const {} = useLoadScript({
+    //     googleMapsApiKey: ''
+    // })
 
     useEffect(() => {
         fetchImage();
@@ -110,6 +116,8 @@ const Destination = () => {
                         </div>
                     </div>
 
+                   
+
                     <div className="photo-wrapper-container">
                         <div className="image-first-side">
                             <div className="container-one">
@@ -152,6 +160,179 @@ const Destination = () => {
                             </div>
                         </div>
                     </div>
+
+                    <div className="Top-reason-general-container">
+                        <div className="Top-reason-book">
+                            <h2 className="top-reason-header">Top Reasons to Book</h2>
+
+                            <div className="icon-reason-container">
+                                <div className="icon-cont">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" color="secondary" class="Svg-sc-12lgb6u-0 hOuIer FreeCancellation__SvgFreeCancellation-sc-1t7ju56-0 ApXvv"><path d="M23 12h-3c0 4.4-3.6 8-8 8-1.6 0-3-.5-4.3-1.2l1.5-1.5c.8.5 1.8.7 2.8.7 3.3 0 6-2.7 6-6h-3l4-4 4 4zM6 12c0-3.3 2.7-6 6-6 1 0 2 .2 2.8.7l1.5-1.5C15 4.5 13.6 4 12 4c-4.4 0-8 3.6-8 8H1l4 4 4-4H6z"></path></svg>
+                                </div>
+                                <div className="reason-contain">
+                                    <h3 className="reason-title">FULLY REFUNDABLE RATES</h3>
+                                    <p className="reason-sub-title">Choose a room with a Refundable Rate for maximum flexibility </p>
+                                </div>
+                            </div>
+
+                            <div className="icon-reason-container">
+                                <div className="icon-cont">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" color="alert" class="Svg-sc-12lgb6u-0 zDJak Ribbon__SvgRibbon-sc-qn6qiu-0 fxqxlx"><path d="M11 17.5c.1 0 .1 0 .2-.1L9 22l-1.5-2-2.5.2 2.1-4.4h.1c.2.2.4.4.6.7.4.5.8 1 1.4 1.2.2.1.4.1.5.1.5 0 .9-.1 1.3-.3zm5.8-1.7c-.2.2-.4.4-.6.7-.4.5-.8 1-1.4 1.2-.6.2-1.2 0-1.8-.2-.1 0-.1 0-.2-.1L15 22l1.5-2 2.5.2-2.2-4.4zM20 9.4c0 .3-.3.7-.6 1.1-.2.3-.5.7-.6 1-.1.4-.1.8-.1 1.2 0 .5 0 .9-.2 1.2s-.6.4-1.1.6c-.4.1-.8.3-1.2.5-.3.2-.6.6-.8.9-.3.4-.6.7-.9.8-.3.1-.7 0-1.2-.2-.4-.1-.8-.2-1.3-.2-.4 0-.9.1-1.3.2-.5.1-.9.3-1.2.2-.3-.1-.6-.5-.9-.8-.3-.3-.5-.7-.8-.9s-.8-.4-1.2-.5c-.5-.2-.9-.3-1.1-.6s-.2-.7-.2-1.2c0-.4 0-.8-.1-1.2s-.4-.7-.6-1c-.3-.4-.6-.7-.6-1.1s.3-.7.6-1.1c.2-.3.4-.6.6-1 .1-.4.1-.9.1-1.3 0-.5 0-.9.2-1.2.2-.3.6-.4 1.1-.6.4 0 .8-.2 1.2-.4.3-.2.6-.6.8-.9.3-.4.6-.8.9-.9h.2c.3 0 .6.1.9.2.4.1.8.2 1.3.2.4 0 .9-.1 1.3-.2.5-.1.9-.3 1.2-.2s.6.5.9.8c.3.3.5.7.8.9.5.3.9.5 1.3.6.5.2.9.3 1.1.6.2.3.2.7.2 1.2 0 .4 0 .8.1 1.2.1.4.4.7.6 1 .3.4.6.8.6 1.1zm-3.5-1.8l-.9-.9-4.9 4.9-2.3-2.3-.9.9 3.2 3.2 5.8-5.8z"></path></svg>
+                                </div>
+                                <div className="reason-contain">
+                                    <h3 className="reason-title">GUESTS LOVE IT</h3>
+                                    <p className="reason-sub-title">Guests give this property an excellent rating of 8.7/10 </p>
+                                </div>
+                            </div>
+
+                            <div className="icon-reason-container">
+                                <div className="icon-cont">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" color="alert" class="Svg-sc-12lgb6u-0 zDJak Trophy__SvgTrophy-sc-qs1eyc-0 kgiFhp"><path d="M19.4 3h-2c-.8 0-1.8.9-1.8 1.8H8.4c0-.9-1-1.8-1.8-1.8H3v8.1c0 .9.9 1.8 1.8 1.8h2c.4 1.8 1.5 3.3 4.3 3.6v1.9c-2 .2-2.7 1.2-2.7 2.3v.3h7.2v-.3c0-1.2-.7-2.2-2.7-2.3v-1.9c2.8-.3 4-1.8 4.3-3.6h2c.9 0 1.8-.9 1.8-1.8V3h-1.6zM4.8 11.1V4.8h1.8v6.3H4.8zm14.4 0h-1.8V4.8h1.8v6.3z"></path></svg>
+                                </div>
+                                <div className="reason-contain">
+                                    <h3 className="reason-title">TOP RATED LOCATION</h3>
+                                    <p className="reason-sub-title">Guests rate the location 9.1/10</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="guest-rating">
+                            <div className="rating-header">
+                                <div className="rating-single-number">
+                                    <h2>8.7</h2>
+                                </div>
+                                <div className="guest-rating-text">
+                                    <h2>Guest Rating</h2>
+                                </div>
+                            </div>
+
+                            <div className="general-rating-for-guest">
+                                <div className="single-rating">
+                                    <div className="single-rating-inner-container">
+                                        <h2 className="rating-title">CLEANINESS</h2>
+                                        <div className="trophy-rating">
+                                            <div className="trophy-container">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 bUvHvR Trophy__SvgTrophy-sc-qs1eyc-0 kgiFhp"><path d="M19.4 3h-2c-.8 0-1.8.9-1.8 1.8H8.4c0-.9-1-1.8-1.8-1.8H3v8.1c0 .9.9 1.8 1.8 1.8h2c.4 1.8 1.5 3.3 4.3 3.6v1.9c-2 .2-2.7 1.2-2.7 2.3v.3h7.2v-.3c0-1.2-.7-2.2-2.7-2.3v-1.9c2.8-.3 4-1.8 4.3-3.6h2c.9 0 1.8-.9 1.8-1.8V3h-1.6zM4.8 11.1V4.8h1.8v6.3H4.8zm14.4 0h-1.8V4.8h1.8v6.3z"></path></svg>
+                                            </div>
+
+                                            <div className="ratin-single-container">
+                                                <h2>8.9</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="rating-bar-container">
+                                        <div className="rating-level-container"></div>
+                                    </div>
+                                </div>
+
+                                <div className="single-rating">
+                                    <div className="single-rating-inner-container">
+                                        <h2 className="rating-title">STAFF</h2>
+                                        <div className="trophy-rating">
+                                            <div className="trophy-container">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 bUvHvR Trophy__SvgTrophy-sc-qs1eyc-0 kgiFhp"><path d="M19.4 3h-2c-.8 0-1.8.9-1.8 1.8H8.4c0-.9-1-1.8-1.8-1.8H3v8.1c0 .9.9 1.8 1.8 1.8h2c.4 1.8 1.5 3.3 4.3 3.6v1.9c-2 .2-2.7 1.2-2.7 2.3v.3h7.2v-.3c0-1.2-.7-2.2-2.7-2.3v-1.9c2.8-.3 4-1.8 4.3-3.6h2c.9 0 1.8-.9 1.8-1.8V3h-1.6zM4.8 11.1V4.8h1.8v6.3H4.8zm14.4 0h-1.8V4.8h1.8v6.3z"></path></svg>
+                                            </div>
+
+                                            <div className="ratin-single-container">
+                                                <h2>8.9</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="rating-bar-container">
+                                        <div className="rating-level-container"></div>
+                                    </div>
+                                </div>
+
+                                <div className="single-rating">
+                                    <div className="single-rating-inner-container">
+                                        <h2 className="rating-title">LOCATION</h2>
+                                        <div className="trophy-rating">
+                                            <div className="trophy-container">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="20" width="20" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 bUvHvR Trophy__SvgTrophy-sc-qs1eyc-0 kgiFhp"><path d="M19.4 3h-2c-.8 0-1.8.9-1.8 1.8H8.4c0-.9-1-1.8-1.8-1.8H3v8.1c0 .9.9 1.8 1.8 1.8h2c.4 1.8 1.5 3.3 4.3 3.6v1.9c-2 .2-2.7 1.2-2.7 2.3v.3h7.2v-.3c0-1.2-.7-2.2-2.7-2.3v-1.9c2.8-.3 4-1.8 4.3-3.6h2c.9 0 1.8-.9 1.8-1.8V3h-1.6zM4.8 11.1V4.8h1.8v6.3H4.8zm14.4 0h-1.8V4.8h1.8v6.3z"></path></svg>
+                                            </div>
+
+                                            <div className="ratin-single-container">
+                                                <h2>8.9</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="rating-bar-container">
+                                        <div className="rating-level-container"></div>
+                                    </div>
+                                </div>
+
+
+                                <button className ="reviews-from-guests">
+                                    <h2>Verified Previews from 2170 guests</h2>
+                                </button>
+                            </div>
+                        </div>
+                        <div className="top-amenities">
+                            <h2 className="top-amenities-header">Top Amenities</h2>
+
+                            <div className="general-amenities-container">
+                                <div className="amenities">
+                                    <div className="amenities-icon-container">
+                                        <div className="main-icon-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 ligbEt Pool__SvgPool-sc-x7doro-0 feyfZs"><path d="M22 21c-1.1 0-1.7-.4-2.2-.6-.4-.2-.6-.4-1.1-.4-.6 0-.8.1-1.1.4-.5.3-1.1.6-2.2.6s-1.7-.4-2.2-.6c-.4-.3-.6-.4-1.2-.4s-.8.1-1.2.4c-.4.2-1 .6-2.1.6s-1.7-.4-2.2-.6c-.4-.3-.6-.4-1.2-.4s-.8.1-1.1.4c-.5.2-1.1.6-2.2.6v-2c.6 0 .8-.1 1.1-.4.5-.2 1.1-.6 2.2-.6s1.7.4 2.2.6c.4.3.6.4 1.2.4s.8-.1 1.2-.4c.4-.2 1-.6 2.1-.6s1.7.4 2.2.6c.4.2.6.4 1.2.4s.8-.1 1.1-.4c.4-.3 1.1-.6 2.2-.6s1.7.4 2.2.6c.4.2.6.4 1.1.4v2zm0-4.5c-1.1 0-1.7-.4-2.2-.6-.4-.2-.6-.4-1.1-.4-.6 0-.8.1-1.1.4-.5.3-1.1.6-2.2.6s-1.7-.4-2.2-.6c-.4-.2-.6-.4-1.1-.4-.6 0-.8.1-1.2.4-.4.3-1.1.6-2.2.6s-1.7-.4-2.2-.6c-.4-.2-.6-.4-1.2-.4s-.8.1-1.1.4c-.5.3-1.1.6-2.2.6v-2c.6 0 .8-.1 1.1-.4.5-.3 1.1-.6 2.2-.6s1.7.4 2.2.6c.4.2.6.4 1.1.4.6 0 .8-.1 1.2-.4.5-.3 1.1-.6 2.2-.6s1.7.4 2.2.6c.4.2.6.4 1.1.4.6 0 .8-.1 1.2-.4.4-.3 1.1-.6 2.2-.6s1.7.4 2.2.6c.4.2.6.4 1.1.4v2zM8.7 12c-.6 0-.8-.1-1.2-.4-.2-.1-.4-.2-.7-.4L10 8 9 7C7.9 5.9 6.8 5.5 5 5.5V3c2.5 0 3.9.4 5.5 2l6.4 6.4c-.1.1-.3.2-.4.2-.4.3-.6.4-1.2.4s-.8-.1-1.2-.4c-.4-.2-1-.6-2.1-.6s-1.7.4-2.2.6c-.4.3-.6.4-1.1.4zm7.8-4C15.1 8 14 6.9 14 5.5S15.1 3 16.5 3 19 4.1 19 5.5 17.9 8 16.5 8z"></path></svg>
+                                        </div>
+
+                                        <h2>Swimming Pool</h2>
+                                    </div>
+
+                                    <div className="amenities-icon-container">
+                                        <div className="main-icon-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 ligbEt Wifi__SvgWifi-sc-12pfcwg-0 cRKlDn"><path d="M2 9.1l1.8 1.8c4.5-4.5 11.8-4.5 16.4 0L22 9.1c-5.5-5.5-14.5-5.5-20 0zm7.3 7.2L12 19l2.7-2.7c-1.4-1.5-3.9-1.5-5.4 0zm-3.7-3.6l1.8 1.8c2.5-2.5 6.5-2.5 9.1 0l1.8-1.8c-3.5-3.5-9.1-3.5-12.7 0z"></path></svg>
+                                        </div>
+
+                                        <h2>Free Internet Access</h2>
+                                    </div>
+
+
+                                    <div className="amenities-icon-container">
+                                        <div className="main-icon-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 ligbEt Parking__SvgParking-sc-i9x80m-0 cciCA"><path d="M12.5 3h-7v18h4v-6h3c3.3 0 6-2.7 6-6s-2.7-6-6-6zm.2 8H9.5V7h3.2c1.1 0 2 .9 2 2s-.9 2-2 2z"></path></svg>
+                                        </div>
+
+                                        <h2>Free Parking</h2>
+                                    </div>
+
+
+                                    <div className="amenities-icon-container">
+                                        <div className="main-icon-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 ligbEt Spa__SvgSpa-sc-161ri0c-0 gXcTYb"><path d="M15.5 9.6c-.2-2.8-1.3-5.5-3.4-7.6-2.2 2.1-3.4 4.9-3.6 7.6 1.3.7 2.5 1.6 3.5 2.7 1-1.1 2.2-2 3.5-2.7zM9 12.3c-.1-.1-.3-.2-.4-.3.1.1.2.2.4.3zm6.4-.3c-.1.1-.3.2-.4.3.1-.1.3-.2.4-.3zM12 15.4C9.8 12.2 6.2 10 2 10c0 5.3 3.4 9.8 8 11.5.6.2 1.3.4 2 .5.7-.1 1.3-.3 2-.5 4.7-1.7 8-6.2 8-11.5-4.2 0-7.9 2.2-10 5.4zM8.6 12c-1.1-.7-2.3-1.3-3.6-1.6 1.3.3 2.5.9 3.6 1.6zM19 10.4c-1.3.3-2.5.9-3.6 1.6 1.1-.7 2.3-1.3 3.6-1.6z"></path></svg>
+                                        </div>
+
+                                        <h2>Spa</h2>
+                                    </div>
+
+                                    <div className="amenities-icon-container">
+                                        <div className="main-icon-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 ligbEt Fitness__SvgFitness-sc-13wvrmu-0 hvAXZc"><path d="M20.6 14.9l1.4-1.4-1.4-1.5-3.6 3.6L8.4 7 12 3.4 10.6 2 9.1 3.4 7.7 2 5.6 4.1 4.1 2.7 2.7 4.1l1.4 1.4L2 7.7l1.4 1.4L2 10.6 3.4 12 7 8.4l8.6 8.6-3.6 3.6 1.4 1.4 1.4-1.4 1.4 1.4 2.1-2.1 1.4 1.4 1.4-1.4-1.4-1.4 2.1-2.1-1.2-1.5z"></path></svg>
+                                        </div>
+
+                                        <h2>Fitness Center</h2>
+                                    </div>
+
+
+                                    <div className="amenities-icon-container">
+                                        <div className="main-icon-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 ligbEt Smoking__SvgSmoking-sc-1ehn0rk-0 hAfVUu"><path d="M2 5.5l7 7H2v3h10l7 7 1.3-1.2-17-17L2 5.5zm18.5 7H22v3h-1.5v-3zm-2.5 0h1.5v3H18v-3zm.9-8.1c.6-.6 1-1.5 1-2.4h-1.5c0 1-.8 1.8-1.9 1.8v1.5c2.2 0 4 1.8 4 4.1v2.1H22V9.4c0-2.2-1.3-4.1-3.1-5zm-4.4 3.8H16c1.1 0 2 .7 2 2.1v1.2h1.5V9.9c0-1.8-1.6-3.2-3.5-3.2h-1.5c-1 0-1.9-1-1.9-2s.8-1.8 1.9-1.8V1.5c-1.9 0-3.4 1.5-3.4 3.3s1.5 3.4 3.4 3.4zm2.5 7.2v-2.9h-2.9l2.9 2.9z"></path></svg>
+                                        </div>
+
+                                        <h2>No Smoking Rooms/Facilities</h2>
+                                    </div>
+
+
+                                </div>
+
+                                <button className="show-amenities">
+                                    Show All Amenities
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <HotDeals />
                 </div>
             </div>
 
@@ -222,10 +403,10 @@ const Destination = () => {
                     </div>
                     <div className="map-container">
                         <div className="inner-map-image">
-                            <img src={mapImage} alt="" />
+                           
                         </div>
                         <div className="main-map-overlay">
-                            
+
                         </div>
                     </div>
                 </div>
