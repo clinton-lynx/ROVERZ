@@ -1,5 +1,214 @@
 @import '../../assets/styles/main.scss';
 
-.hot-deals-general-container{
+.hot-deals-general-container {
     width: 100%;
+
+    .inner-wrapper-container {
+        background-color: #fff;
+        width: 100%;
+        border-radius: 16px;
+        cursor: pointer;
+        border: 1px solid rgb(0, 104, 239);
+        box-shadow: rgba(0, 0, 0, 0.03) 0px -1px 0px 0px, rgba(0, 0, 0, 0.2) 0px 0px 2px 0px, rgba(0, 0, 0, 0.12) 0px 4px 2px -2px, rgba(0, 0, 0, 0.16) 0px 4px 8px -1px;
+
+        .hot-deals-inner-container {
+            width: 100%;
+            padding: 1%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+    }
+
+    .inner-wrapper-container:hover{
+        background-color: rgb(232, 242, 255);
+    }
+}
+
+
+
+.image-location {
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+
+    .image-container {
+        width: 100%;
+        max-width: 6rem;
+        margin-right: 8px;
+
+        .inner-image-wrapper {
+            width: 100%;
+            max-width: 6rem;
+            min-height: 6rem;
+            border-radius: 16px;
+            background-color: rgba(0, 0, 0, 0.3);
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 16px;
+            }
+        }
+    }
+
+    .hot-deal-text-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: left;
+        flex-direction: column;
+
+        .col-three {
+            color: rgb(79, 111, 143);
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 0.8em;
+        }
+
+        .col-one {
+            font-weight: 700;
+            color: rgb(0, 104, 239);
+            font-size: 14px;
+        }
+
+        .col-two{
+            font-size: 16px;
+            line-height: 1.3em;
+        }
+    }
+
+
+}
+
+.col-three {
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.3em;
+}
+
+.rating-review-star {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.rating-box {
+    background-color: rgb(246, 128, 19);
+    color: rgb(255, 255, 255);
+    margin-right: 8px;
+    padding: 4px 6px;
+    height: 25px;
+    text-align: center;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .col-four {
+        font-size: 12px;
+        font-weight: 800;
+
+    }
+}
+
+.review-star {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .slash-divide {
+        padding-right: 8px;
+    }
+
+    .col-eight {
+        color: rgb(79, 111, 143);
+        font-size: 17px;
+        margin-right: 8px;
+        font-weight: 600;
+        font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+}
+
+.price-location{
+    max-width: 11rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .price-vip{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        height: 15px;
+        
+        svg{
+            margin: 0 5px;
+        }
+    }
+}
+
+.col-five{
+    font-weight: 700;
+    color: rgb(0, 104, 239);
+    font-size: 14px;
+}
+
+.price-number-per-nigt{
+    display: flex;
+    align-items: baseline;
+
+
+    .price-container{
+        color: rgb(0, 104, 239);
+        font-weight: 700;
+        font-size: 36px;
+
+        sup{
+            font-size: 14px;
+            margin-top: 4px;
+
+            span{
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+
+.col-seven{
+    color: rgb(0, 104, 239);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.warning-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background-color: rgb(255, 243, 192);
+    color: rgb(0, 24, 51);
+    margin: 16px 0;
+    padding: 1%;
+
+    .warining-icon{
+        margin-right: 8px;
+    }
+
+    .warning-main-header{
+        font-weight: 700;
+        margin-right: 8px;
+    }
+
 }
