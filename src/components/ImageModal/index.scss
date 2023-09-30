@@ -1,0 +1,41 @@
+@import '../../assets/styles/main.scss';
+
+.modal-parent-container{
+    width: 100%;
+    background-color: red;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 99999999;
+    left: 0;
+}
+
+.caret-left svg{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.modal-task-bar{
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+}
+
+.icon-container{
+    width: 100%;
+    max-width: 17rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .icon-btn-1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

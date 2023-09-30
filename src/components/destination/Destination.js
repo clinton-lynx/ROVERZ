@@ -8,6 +8,7 @@ import Coffee from '../Coffee/Coffee'
 import Places from "../places/Places";
 import { useEffect, useState } from "react";
 import HotDeals from "../HotDeals/hotDeals";
+import ImageModal from "../ImageModal/ImageModal";
 // import { useLoadScript, GoogleMap, Marker } from '@react-google-maps/api';
 // import mapImage from '../destination/images/staticmap.jpg'
 
@@ -16,6 +17,7 @@ import HotDeals from "../HotDeals/hotDeals";
 
 const imageUrl = "https://source.unsplash.com/600x600/?sig=32";
 const Destination = () => {
+    const [isOpen, setIsOpen] = useState(false);
     const [img, setImg] = useState();
 
     const fetchImage = async () => {
@@ -116,7 +118,7 @@ const Destination = () => {
                         </div>
                     </div>
 
-                   
+
 
                     <div className="photo-wrapper-container">
                         <div className="image-first-side">
@@ -134,10 +136,11 @@ const Destination = () => {
                                 <div className="inner-container-one">
                                     <img src={img} alt="icons" />
                                     <div className="container-one-overlay">
-                                        <button className="container-one-button">
+                                        <button className="container-one-button" onClick={() => setIsOpen(true)}>
                                             <span className="camera-container"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16"> <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z" /> <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" /> </svg></span>
-                                            <span className="see-all-photos">See all photos</span>
+                                            <span className="see-all-photos" >See all photos</span>
                                         </button>
+                                       
                                     </div>
                                 </div>
                             </div>
@@ -148,6 +151,7 @@ const Destination = () => {
                                 </div>
                             </div>
                         </div>
+                        {isOpen && <ImageModal setIsOpen={setIsOpen} />}
 
                         <div className="image-second-side diff-img-two">
                             <div className="image-second-side-overlay bol-img-one">
@@ -261,7 +265,7 @@ const Destination = () => {
                                 </div>
 
 
-                                <button className ="reviews-from-guests">
+                                <button className="reviews-from-guests">
                                     <h2>Verified Previews from 2170 guests</h2>
                                 </button>
                             </div>
@@ -403,7 +407,7 @@ const Destination = () => {
                     </div>
                     <div className="map-container">
                         <div className="inner-map-image">
-                           
+
                         </div>
                         <div className="main-map-overlay">
 

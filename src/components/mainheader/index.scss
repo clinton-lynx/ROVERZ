@@ -36,6 +36,8 @@
         display: block;
         min-width: 28.33%;
         cursor: pointer;
+        transition-timing-function: ease-in-out;
+        transition-duration: 3s;
       }
 
       .parent-logo-container{
