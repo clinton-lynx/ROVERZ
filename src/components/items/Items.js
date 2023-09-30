@@ -10,7 +10,7 @@ const Items = () => {
   const settings = {
     dots: true,
     infinite: false,
-    speed: 500,
+    speed: 1500,
     slidesToShow: 5,
     slidesToScroll: 4,
     initialSlide: 0,

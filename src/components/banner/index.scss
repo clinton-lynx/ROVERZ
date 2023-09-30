@@ -15,7 +15,7 @@
 
 .banner-overlay {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -70,6 +70,9 @@
     // box-shadow: 2px 2px 4px 4px #fff;
     border-style: unset;
     padding-left: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: left;
 
     @include breakpoint-down ($sm) {
         .banner-header-text {

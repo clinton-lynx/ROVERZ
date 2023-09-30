@@ -98,12 +98,23 @@ const FilterResults = () => {
 
                     <div className="middle-section">
                         <div className="first-section-header">
-                            <h3 className="filter-by-popular">Sustainability</h3>
+                            <h3 className="filter-by-popular">Rate Options</h3>
                         </div>
                         <div className="Filters">
                             <div className="Checkbox-text-container">
                                 <div><input type="checkbox" className="Larger" /></div>
-                                <div className="filter-option-text">Travel Sustainable properties</div>
+                                <div className="filter-option-text">Free Cancellation</div>
+                            </div>
+
+                            <div className="Number-available">
+                                <h3 className="Number-available-text">194</h3>
+                            </div>
+                        </div>
+
+                        <div className="Filters">
+                            <div className="Checkbox-text-container">
+                                <div><input type="checkbox" className="Larger" /></div>
+                                <div className="filter-option-text">Pay Later</div>
                             </div>
 
                             <div className="Number-available">
@@ -264,71 +275,63 @@ const FilterResults = () => {
 
                     <div className="First-filter-section">
                         <div className="first-section-header">
-                            <h3 className="filter-by-popular">Popular filter</h3>
+                            <h3 className="filter-by-popular">Your Budget (per night)</h3>
+                        </div>
+
+                        <div className="set-budget">
+                            <div className="inner-budget-text">
+                                <h3 className="budget-header">Set your own budget</h3>
+                                <p className="budget-rating"> $0 to $180 per night </p>
+                            </div>
+                            <div className="toggle-button">
+                                <div className="inner-button-container">
+                                    <div className="check-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="18px" width="18px" aria-hidden="true" fill="currentcolor" name="Check" color="background.dark" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 bUMEft Check__SvgCheck-sc-9psb6r-0 jQwtKB"><path d="M8.6 15.6l-4.2-4.2L3 12.8l5.6 5.6 12-12L19.2 5 8.6 15.6z"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div className="Filters">
                             <div className="Checkbox-text-container">
                                 <div><input type="checkbox" className="Larger" /></div>
-                                <div className="filter-option-text">Hotels</div>
+                                <div className="filter-option-text">$$$$</div>
                             </div>
 
                             <div className="Number-available">
-                                <h3 className="Number-available-text">194</h3>
-                            </div>
-                        </div>
-
-                        <div className="Filters">
-                            <div className="Checkbox-text-container">
-                                <div><input type="checkbox" className="Larger" /></div>
-                                <div className="filter-option-text">5 stars</div>
-                            </div>
-
-                            <div className="Number-available">
-                                <h3 className="Number-available-text">11</h3>
-                            </div>
-                        </div>
-
-                        <div className="Filters">
-                            <div className="Checkbox-text-container">
-                                <div><input type="checkbox" className="Larger" /></div>
-                                <div className="filter-option-text">Resorts</div>
-                            </div>
-
-                            <div className="Number-available">
-                                <h3 className="Number-available-text">14</h3>
+                                <h3 className="Number-available-text">( $0 - $34 per night )</h3>
                             </div>
                         </div>
 
                         <div className="Filters">
                             <div className="Checkbox-text-container">
                                 <div><input type="checkbox" className="Larger" /></div>
-                                <div className="filter-option-text">Swimming Pool</div>
+                                <div className="filter-option-text">$$$$</div>
                             </div>
 
                             <div className="Number-available">
-                                <h3 className="Number-available-text">194</h3>
+                                <h3 className="Number-available-text">( $35 - $49 per night )</h3>
                             </div>
                         </div>
 
                         <div className="Filters">
                             <div className="Checkbox-text-container">
                                 <div><input type="checkbox" className="Larger" /></div>
-                                <div className="filter-option-text">The Curve</div>
+                                <div className="filter-option-text">$$$$</div>
                             </div>
 
                             <div className="Number-available">
-                                <h3 className="Number-available-text">66</h3>
+                                <h3 className="Number-available-text">( $50 - $63 per night )</h3>
                             </div>
                         </div>
 
                         <div className="Filters">
                             <div className="Checkbox-text-container">
                                 <div><input type="checkbox" className="Larger" /></div>
-                                <div className="filter-option-text">Villas</div>
+                                <div className="filter-option-text">$$$$</div>
                             </div>
 
                             <div className="Number-available">
-                                <h3 className="Number-available-text">36</h3>
+                                <h3 className="Number-available-text">( $64+ per night )</h3>
                             </div>
                         </div>
 
@@ -423,12 +426,12 @@ const FilterResults = () => {
 
                     <div className="First-filter-section">
                         <div className="first-section-header">
-                            <h3 className="filter-by-popular">Popular filter</h3>
+                            <h3 className="filter-by-popular">Number Of Beds</h3>
                         </div>
                         <div className="Filters">
                             <div className="Checkbox-text-container">
                                 <div><input type="checkbox" className="Larger" /></div>
-                                <div className="filter-option-text">Hotels</div>
+                                <div className="filter-option-text">1 bed</div>
                             </div>
 
                             <div className="Number-available">
@@ -439,7 +442,7 @@ const FilterResults = () => {
                         <div className="Filters">
                             <div className="Checkbox-text-container">
                                 <div><input type="checkbox" className="Larger" /></div>
-                                <div className="filter-option-text">5 stars</div>
+                                <div className="filter-option-text">2 beds</div>
                             </div>
 
                             <div className="Number-available">
@@ -450,7 +453,7 @@ const FilterResults = () => {
                         <div className="Filters">
                             <div className="Checkbox-text-container">
                                 <div><input type="checkbox" className="Larger" /></div>
-                                <div className="filter-option-text">Resorts</div>
+                                <div className="filter-option-text">3+ beds</div>
                             </div>
 
                             <div className="Number-available">
@@ -458,39 +461,92 @@ const FilterResults = () => {
                             </div>
                         </div>
 
-                        <div className="Filters">
-                            <div className="Checkbox-text-container">
-                                <div><input type="checkbox" className="Larger" /></div>
-                                <div className="filter-option-text">Swimming Pool</div>
-                            </div>
 
-                            <div className="Number-available">
-                                <h3 className="Number-available-text">194</h3>
-                            </div>
+                    </div>
+
+                    <div className="amenities">
+
+                        <div className="header-container">
+                            <h2 className="col-ten">Amenities</h2>
                         </div>
 
-                        <div className="Filters">
-                            <div className="Checkbox-text-container">
-                                <div><input type="checkbox" className="Larger" /></div>
-                                <div className="filter-option-text">The Curve</div>
+                        <div className="amenities-option-container">
+                            <div className="Filters">
+                                <div className="Checkbox-text-container">
+                                    <div><input type="checkbox" className="Larger" /></div>
+                                    <div className="filter-option-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="16" width="16" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 fRAizB Wifi__SvgWifi-sc-12pfcwg-0 cRKlDn pcln-filters-primary-checkbox-icon" id="Amenities-FINTRNT-checkbox-0-icon" color="text.base"><path d="M2 9.1l1.8 1.8c4.5-4.5 11.8-4.5 16.4 0L22 9.1c-5.5-5.5-14.5-5.5-20 0zm7.3 7.2L12 19l2.7-2.7c-1.4-1.5-3.9-1.5-5.4 0zm-3.7-3.6l1.8 1.8c2.5-2.5 6.5-2.5 9.1 0l1.8-1.8c-3.5-3.5-9.1-3.5-12.7 0z"></path></svg>
+
+                                        <p>Free Internet Access</p>
+                                    </div>
+                                </div>
+
+                                <div className="Number-available">
+                                    <h3 className="Number-available-text">194</h3>
+                                </div>
                             </div>
 
-                            <div className="Number-available">
-                                <h3 className="Number-available-text">66</h3>
+                            <div className="Filters">
+                                <div className="Checkbox-text-container">
+                                    <div><input type="checkbox" className="Larger" /></div>
+                                    <div className="filter-option-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="16" width="16" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 gzYsjM Breakfast__SvgBreakfast-sc-c158l0-0 Hnkbq pcln-filters-primary-checkbox-icon" id="Amenities-FBRKFST-checkbox-1-icon" color="text.light" disabled=""><path d="M19 3H3v10c0 2.2 1.8 4 4 4h6c2.2 0 4-1.8 4-4v-3h2c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 5h-2V5h2v3zM3 19h16v2H3v-2z"></path></svg>
+
+                                        <p>Free Breakfast</p>
+                                    </div>
+                                </div>
+
+                                <div className="Number-available">
+                                    <h3 className="Number-available-text">194</h3>
+                                </div>
                             </div>
+
+                            <div className="Filters">
+                                <div className="Checkbox-text-container">
+                                    <div><input type="checkbox" className="Larger" /></div>
+                                    <div className="filter-option-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="16" width="16" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 gzYsjM Pets__SvgPets-sc-16hy1a4-0 dBMjpz pcln-filters-primary-checkbox-icon" id="Amenities-PETALLOW-checkbox-3-icon" color="text.light" disabled=""><path d="M4.5 11.5C3.1 11.5 2 10.4 2 9s1.1-2.5 2.5-2.5S7 7.6 7 9s-1.1 2.5-2.5 2.5zm4.5-4C7.6 7.5 6.5 6.4 6.5 5S7.6 2.5 9 2.5s2.5 1.1 2.5 2.5S10.4 7.5 9 7.5zm6 0c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5 2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5zm4.5 4c-1.4 0-2.5-1.1-2.5-2.5s1.1-2.5 2.5-2.5S22 7.6 22 9s-1.1 2.5-2.5 2.5zm-2.2 2.9c1.3 1.3 2.9 2.8 2.6 4.8-.3 1-1 2-2.3 2.3-.7.1-3.1-.4-5.5-.4h-.2c-2.5 0-4.8.6-5.5.4-1.3-.3-2-1.3-2.3-2.3-.3-2 1.3-3.5 2.6-4.8.9-1 1.6-1.9 2.5-2.9.5-.5 1.1-1.1 1.8-1.3.1 0 .2-.1.3-.1.2-.1.4-.1.7-.1h.8c.1 0 .2.1.3.1.7.2 1.3.8 1.8 1.3.8 1.1 1.6 1.9 2.4 3z"></path></svg>
+
+                                        <p>Free Pet Allowed</p>
+                                    </div>
+                                </div>
+
+                                <div className="Number-available">
+                                    <h3 className="Number-available-text">66</h3>
+                                </div>
+                            </div>
+
+                            <div className="Filters">
+                                <div className="Checkbox-text-container">
+                                    <div><input type="checkbox" className="Larger" /></div>
+                                    <div className="filter-option-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="16" width="16" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 fRAizB Parking__SvgParking-sc-i9x80m-0 cciCA pcln-filters-primary-checkbox-icon" id="Amenities-FPRKING-checkbox-2-icon" color="text.base"><path d="M12.5 3h-7v18h4v-6h3c3.3 0 6-2.7 6-6s-2.7-6-6-6zm.2 8H9.5V7h3.2c1.1 0 2 .9 2 2s-.9 2-2 2z"></path></svg>
+
+                                        <p>Free Packing </p>
+                                    </div>
+                                </div>
+
+                                <div className="Number-available">
+                                    <h3 className="Number-available-text">36</h3>
+                                </div>
+                            </div>
+
+                            <div className="Filters">
+                                <div className="Checkbox-text-container">
+                                    <div><input type="checkbox" className="Larger" /></div>
+                                    <div className="filter-option-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="16" width="16" aria-hidden="true" fill="currentcolor" tabindex="-1" focusable="false" role="img" class="Svg-sc-12lgb6u-0 fRAizB Pool__SvgPool-sc-x7doro-0 feyfZs pcln-filters-primary-checkbox-icon" id="Amenities-SPOOL-checkbox-4-icon" color="text.base"><path d="M22 21c-1.1 0-1.7-.4-2.2-.6-.4-.2-.6-.4-1.1-.4-.6 0-.8.1-1.1.4-.5.3-1.1.6-2.2.6s-1.7-.4-2.2-.6c-.4-.3-.6-.4-1.2-.4s-.8.1-1.2.4c-.4.2-1 .6-2.1.6s-1.7-.4-2.2-.6c-.4-.3-.6-.4-1.2-.4s-.8.1-1.1.4c-.5.2-1.1.6-2.2.6v-2c.6 0 .8-.1 1.1-.4.5-.2 1.1-.6 2.2-.6s1.7.4 2.2.6c.4.3.6.4 1.2.4s.8-.1 1.2-.4c.4-.2 1-.6 2.1-.6s1.7.4 2.2.6c.4.2.6.4 1.2.4s.8-.1 1.1-.4c.4-.3 1.1-.6 2.2-.6s1.7.4 2.2.6c.4.2.6.4 1.1.4v2zm0-4.5c-1.1 0-1.7-.4-2.2-.6-.4-.2-.6-.4-1.1-.4-.6 0-.8.1-1.1.4-.5.3-1.1.6-2.2.6s-1.7-.4-2.2-.6c-.4-.2-.6-.4-1.1-.4-.6 0-.8.1-1.2.4-.4.3-1.1.6-2.2.6s-1.7-.4-2.2-.6c-.4-.2-.6-.4-1.2-.4s-.8.1-1.1.4c-.5.3-1.1.6-2.2.6v-2c.6 0 .8-.1 1.1-.4.5-.3 1.1-.6 2.2-.6s1.7.4 2.2.6c.4.2.6.4 1.1.4.6 0 .8-.1 1.2-.4.5-.3 1.1-.6 2.2-.6s1.7.4 2.2.6c.4.2.6.4 1.1.4.6 0 .8-.1 1.2-.4.4-.3 1.1-.6 2.2-.6s1.7.4 2.2.6c.4.2.6.4 1.1.4v2zM8.7 12c-.6 0-.8-.1-1.2-.4-.2-.1-.4-.2-.7-.4L10 8 9 7C7.9 5.9 6.8 5.5 5 5.5V3c2.5 0 3.9.4 5.5 2l6.4 6.4c-.1.1-.3.2-.4.2-.4.3-.6.4-1.2.4s-.8-.1-1.2-.4c-.4-.2-1-.6-2.1-.6s-1.7.4-2.2.6c-.4.3-.6.4-1.1.4zm7.8-4C15.1 8 14 6.9 14 5.5S15.1 3 16.5 3 19 4.1 19 5.5 17.9 8 16.5 8z"></path></svg>
+
+                                        <p>Free Packing </p>
+                                    </div>
+                                </div>
+
+                                <div className="Number-available">
+                                    <h3 className="Number-available-text">36</h3>
+                                </div>
+                            </div>
+
                         </div>
-
-                        <div className="Filters">
-                            <div className="Checkbox-text-container">
-                                <div><input type="checkbox" className="Larger" /></div>
-                                <div className="filter-option-text">Villas</div>
-                            </div>
-
-                            <div className="Number-available">
-                                <h3 className="Number-available-text">36</h3>
-                            </div>
-                        </div>
-
 
                     </div>
                 </div>
@@ -519,7 +575,7 @@ const FilterResults = () => {
                             </button>
 
                             <button>
-                                Free wifi 
+                                Free wifi
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.31 12l6.89-6.89a.93.93 0 1 0-1.31-1.31L12 10.69 5.11 3.8A.93.93 0 0 0 3.8 5.11L10.69 12 3.8 18.89a.93.93 0 0 0 1.31 1.31L12 13.31l6.89 6.89a.93.93 0 1 0 1.31-1.31z"></path></svg>
                             </button>
 
@@ -539,7 +595,7 @@ const FilterResults = () => {
                             </button>
 
                             <button>
-                               <span>Hotels</span>
+                                <span>Hotels</span>
                                 <span> (8)</span>
                             </button>
 

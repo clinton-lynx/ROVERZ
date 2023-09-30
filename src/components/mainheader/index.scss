@@ -16,7 +16,7 @@
 
 .main-parent-sub-container{
     width: 100%;
-    height: 100px;
+    height: 68px;
     padding: 1%;
     max-width: 100rem;
     display: flex;
@@ -100,7 +100,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 40px;
+    height: 50px;
 }
 
 .list-item{
@@ -111,13 +111,10 @@
     align-items: center;
     justify-content: center;
     height: inherit;
-    border-radius: 50px;
     cursor: pointer;
+    transition: margin-right 4s ease-in-out ;
 }
 
-.list-item:hover{
-    background-color: rgba(0,0,0,0.2);
-}
 
 .list-item-text{
     font-size: 1.3rem;

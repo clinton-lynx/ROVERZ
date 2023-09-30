@@ -9,6 +9,24 @@
 }
 
 .parent-logo-container{
-    width: 5rem;
+    width: 10rem;
     height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .price-vip-one{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h3.col-five-one{
+            font-weight: 700;
+            color: rgb(0, 104, 239);
+            font-size: 29px;
+        }
+    }
 }
+
+

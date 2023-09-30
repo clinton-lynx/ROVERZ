@@ -24,11 +24,8 @@
 
 .Side-filter-bar {
     width: 100%;
-    max-width: 269px;
+    max-width: 300px;
     background-color: #fff;
-    border: 1px solid #c6c6c6;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 
     .filtered-header-text {
         width: 100%;
@@ -50,16 +47,19 @@
     display: flex;
     align-items: end;
     padding-left: 3%;
+    border-bottom: 1px solid #c6c6c6;
 
     .filter-by-popular {
-        font-size: 15px;
-        font-weight: 800;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.2px;
+
     }
 }
 
-.First-filter-section {
-    border-bottom: 1px solid #c6c6c6;
-}
+// .First-filter-section {
+//     border-bottom: 1px solid #c6c6c6;
+// }
 
 
 .Filters {
@@ -69,7 +69,8 @@
     justify-content: space-between;
     padding: 0% 3%;
     height: 25px;
-    margin: 2% 0;
+    margin: 0.5rem 0;
+    cursor: pointer;
 
     .Checkbox-text-container {
         display: flex;
@@ -78,7 +79,22 @@
 
         .filter-option-text {
             margin: 0 5px;
-            font-size: 16px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            font-weight: 500;
+
+            svg {
+                margin-right: 3px;
+                color: rgb(0, 24, 51);
+            }
+
+            p {
+                color: rgb(0, 24, 51);
+                font-size: 14px;
+                font-weight: 500;
+            }
         }
     }
 }
@@ -90,8 +106,9 @@ input.Larger {
 }
 
 .Number-available-text {
-    font-size: 13px;
-    font-weight: 100;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: unset;
 }
 
 .Filtered-result {
@@ -165,7 +182,7 @@ input.Larger {
     justify-content: space-between;
     flex-direction: row;
 
-   
+
 
     .Location-Name {
         color: #006ce4;
@@ -187,8 +204,8 @@ input.Larger {
             width: 100%;
             flex-direction: row;
 
-            
-            h2.loct-text-dol{
+
+            h2.loct-text-dol {
                 display: none;
             }
         }
@@ -202,12 +219,12 @@ input.Larger {
 
         }
 
-        .Location-inner-container{
+        .Location-inner-container {
             width: 100%;
             margin-bottom: 8px;
         }
 
-        .Image-general-container{
+        .Image-general-container {
             min-height: 16rem;
         }
     }
@@ -323,7 +340,7 @@ input.Larger {
 }
 
 
-h2.loct-text-dol{
+h2.loct-text-dol {
     color: #00AA00;
     font-size: 16px;
     font-weight: 100;
@@ -413,5 +430,80 @@ h2.loct-text-dol{
                 color: #003b95;
             }
         }
+    }
+}
+
+.header-container {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+
+    h2.col-ten {
+        font-size: 15px;
+        font-weight: 800;
+    }
+}
+
+.Number-available {
+    width: 100%;
+    max-width: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    color: rgb(0, 24, 51);
+}
+
+.set-budget {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 1.3rem;
+    padding-top: 0.8rem;
+
+    .toggle-button {
+        width: 100%;
+        max-width: 49px;
+        border-radius: 999px;
+    }
+
+    .inner-budget-text {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: left;
+        padding-left: 8px;
+    }
+
+    h3.budget-header {
+        color: rgb(0, 24, 51);
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: 0.2px;
+    }
+}
+
+.inner-button-container {
+    width: 100%;
+    height: 28px;
+    background-color: rgb(79, 111, 143);
+    border-radius: 999px;
+    padding: 1% 4px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+
+    .check-button {
+        width: 22px;
+        height: 22px;
+        background-color: #fff;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 3px;
     }
 }

@@ -120,8 +120,8 @@ const Destination = () => {
 
                     <div className="photo-wrapper-container">
                         <div className="image-first-side">
-                            <div className="container-one">
-                                <div className="inner-container-one">
+                            <div className="container-one diff-img-one">
+                                <div className="inner-container-one  bol-img">
                                     <img src={img} alt="icons" />
                                 </div>
                             </div>
@@ -149,8 +149,8 @@ const Destination = () => {
                             </div>
                         </div>
 
-                        <div className="image-second-side">
-                            <div className="image-second-side-overlay">
+                        <div className="image-second-side diff-img-two">
+                            <div className="image-second-side-overlay bol-img-one">
                                 <img src={img} alt="icons" />
                                 <div className="container-one-overlay diff-cont-overlay">
                                     <button className="container-one-button diff-one-button">
