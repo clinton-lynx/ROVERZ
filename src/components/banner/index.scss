@@ -73,6 +73,10 @@
     display: flex;
     align-items: center;
     justify-content: left;
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    flex-direction: column;
 
     @include breakpoint-down ($sm) {
         .banner-header-text {
@@ -155,5 +159,17 @@
   svg.text-line{
     text-align: left;
     width: 100%;
-    max-width: 38rem;
+    max-width: 75rem;
+    font-size: 65px;
   }
+
+//   svg.diff-text-line{
+//     font-size: 35px;
+//     padding-left: 9.5rem;
+//   }
+
+.more-info-header-text{
+    width: 100%;
+    color: #ccc;
+    font-size: 25px;
+}
