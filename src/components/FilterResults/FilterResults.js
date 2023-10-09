@@ -8,16 +8,40 @@ import Pagination from "../Pagination/Pagination"
 const imageUrl = "https://source.unsplash.com/600x600/?sig=32";
 
 const FilterResults = () => {
-
-
+    const [btnState, setBtnState] = useState(false)
+    const [isSticky, setSticky] = useState(false);
 
     //Get current posts
+    function handleClick(){
+        setBtnState(btnState => !btnState)
+    }
+    
+    useEffect(() => {
+        const handleScroll = () => {
+          // Check the scroll position and update the state accordingly
+          if (window.scrollY > 74) {
+            setSticky(true);
+          } else {
+            setSticky(false);
+          }
+        };
+    
+        // Attach the scroll event listener when the component mounts
+        window.addEventListener('scroll', handleScroll);
+    
+        // Clean up the event listener when the component unmounts
+        return () => {
+          window.removeEventListener('scroll', handleScroll);
+        };
+      }, []); // Empty dependency array ensures the effect runs only once on mount
+
+    
 
 
     return (
         <div className="Parent-main-filter-result-container">
             <div className="Sub-parent-main-filter-result-container">
-                <div className="Side-filter-bar">
+                <div className={`Side-filter-bar ${isSticky ? 'sticky' : ''}`}>
                     <div className="filtered-header-text">
                         <h3 className="filter-by">Filter by:</h3>
                     </div>
@@ -557,8 +581,8 @@ const FilterResults = () => {
                         <div className="grid-stack-layout">
                             <h2>Sort: Newest</h2>
                             <div className="grid-stack">
-                                <button className="stack-view"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stack" viewBox="0 0 16 16"> <path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z" /> <path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z" /> </svg></button>
-                                <button className="grid-view">
+                                <button className="stack-view" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-stack" viewBox="0 0 16 16"> <path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.598.598 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.598.598 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.598.598 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535L7.733.063z" /> <path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.598.598 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.659z" /> </svg></button>
+                                <button className="grid-view"  onClick={handleClick}>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16"> <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" /> </svg>
                                 </button>
                             </div>
@@ -602,13 +626,23 @@ const FilterResults = () => {
 
                         </div>
                     </div>
-                    <FilterLocation />
-                    <FilterLocation />
-                    <FilterLocation />
-                    <FilterLocation />
-                    <FilterLocation />
-                    <FilterLocation />
-                    <FilterLocation />
+                    <div className="location-general-container-one">
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                    </div>
 
                     <div className="pagination-container">
                         <Pagination />

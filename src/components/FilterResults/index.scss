@@ -10,8 +10,9 @@
     .Sub-parent-main-filter-result-container {
         width: inherit;
         display: flex;
-        align-items: flex-start;
-        // justify-content: space-between;
+        align-items: start;
+        position: relative;
+        justify-content: space-between;
 
         @include breakpoint-down ($xl) {
             .Side-filter-bar {
@@ -21,11 +22,23 @@
     }
 }
 
+.sticky{
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    overflow-y: scroll;
+}
+
+.sticky::-webkit-scrollbar{
+    display: none;
+}
 
 .Side-filter-bar {
-    width: 100%;
-    max-width: 300px;
-    background-color: #fff;
+    max-width: 350px;
+    width: 30%;
+    padding-top: 4.5rem;
+    // background-color: #fff;
+    // background-color: red;
 
     .filtered-header-text {
         width: 100%;
@@ -506,4 +519,11 @@ h2.loct-text-dol {
         position: absolute;
         top: 3px;
     }
+}
+
+.active{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0px;
 }
