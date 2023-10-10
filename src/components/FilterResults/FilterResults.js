@@ -626,7 +626,7 @@ const FilterResults = () => {
 
                         </div>
                     </div>
-                    <div className="location-general-container-one">
+                    <div className={`location-general-container-one ${btnState ? 'gridChange' : ''}`}>
                         <FilterLocation />
                         <FilterLocation />
                         <FilterLocation />

@@ -22,20 +22,20 @@
     }
 }
 
-.sticky{
+.sticky {
     position: sticky;
     height: 100vh;
     top: 0;
     overflow-y: scroll;
 }
 
-.sticky::-webkit-scrollbar{
+.sticky::-webkit-scrollbar {
     display: none;
 }
 
 .Side-filter-bar {
     max-width: 350px;
-    width: 30%;
+    width: 20%;
     padding-top: 4.5rem;
     // background-color: #fff;
     // background-color: red;
@@ -125,7 +125,7 @@ input.Larger {
 }
 
 .Filtered-result {
-    min-width: 73%;
+    width: 78%;
     padding: 1%;
     margin: 1%;
     // background-color: green;
@@ -383,6 +383,8 @@ h2.loct-text-dol {
     border: none;
 }
 
+
+
 .stack-view {
     padding: 0.3rem 0.8rem;
     border-bottom-left-radius: 4px;
@@ -521,9 +523,36 @@ h2.loct-text-dol {
     }
 }
 
-.active{
+.active {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 0px;
+}
+
+.gridChange {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+
+    .Location-card{
+        width: 32.3% ;
+        padding: 0;
+        margin: 0.5%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        box-sizing: border-box;
+        
+
+        .Location-general-info-container{
+            width: 32.3%;
+            flex-direction: column;
+            padding: 0 0.5rem;
+            margin: 0;
+            // display: none;
+        }
+    }
 }
