@@ -130,6 +130,10 @@ input.Larger {
     margin: 1%;
     // background-color: green;
 
+    @include breakpoint-down ($xl) {
+       width: 100%;
+    }
+
     .Location-card {
         margin: 1% 0;
         width: 100%;
@@ -146,6 +150,7 @@ input.Larger {
 
 .Image-general-container {
     min-height: 15rem;
+    max-height: 15rem;
     min-width: 15rem;
     position: relative;
 }
@@ -155,13 +160,15 @@ input.Larger {
     max-width: 15rem;
     background-color: rgba(0, 0, 0, 0.4);
     min-height: inherit;
+    max-height: inherit;
     z-index: 0;
 
 
     Img {
         width: inherit;
         min-height: inherit;
-        object-fit: contain;
+        max-height: inherit;
+        object-fit: cover;
         z-index: 0;
     }
 }
@@ -175,6 +182,7 @@ input.Larger {
     min-height: inherit;
     padding: 2%;
     z-index: 0;
+    height: 100%;
 }
 
 .like-container {
@@ -383,6 +391,14 @@ h2.loct-text-dol {
     border: none;
 }
 
+.grid-color{
+    background-color: #f0f0f0;
+}
+
+.grid-stack-color{
+    background-color: red;
+}
+
 
 
 .stack-view {
@@ -391,6 +407,7 @@ h2.loct-text-dol {
     border-right: 0.5px solid #d5d8db;
     border-top-left-radius: 4px;
     border: none;
+    background-color: #fff;
 }
 
 .filter-result-number-layout {
@@ -545,14 +562,29 @@ h2.loct-text-dol {
         align-items: center;
         flex-direction: column;
         box-sizing: border-box;
-        
+         
+        .Image-general-container{
+            width: 100%;
+
+            .Image-container{
+                max-width: 23.3rem;
+            }
+        }
 
         .Location-general-info-container{
-            width: 32.3%;
+            width: 100%;
             flex-direction: column;
-            padding: 0 0.5rem;
+            padding: 0.5rem;
             margin: 0;
             // display: none;
+
+            .Location-inner-container{
+                width: 100%;
+            }
+
+            .review-price-container{
+                width: 100%;
+            }
         }
     }
 }

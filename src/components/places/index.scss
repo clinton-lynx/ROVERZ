@@ -41,12 +41,12 @@
     img{
         width: inherit;
         height: inherit;
-        object-fit: contain;
+        object-fit: cover;
     }
 }
 
 .first-mainCard {
-    height: 18.5rem;
+    height: 15.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -148,11 +148,15 @@ svg.UctUV {
     font-weight: 100;
     letter-spacing: 2px;
     font-size: 1.3rem;
+    margin-top: 10px;
     margin-bottom: 5px;
+    color: #222222;
+    text-decoration: none;
 }
 
 .place-card-container{
     padding: 0 0.4rem;
+    text-decoration: none;
 }
 
 .like-card diff-like-card{
@@ -164,6 +168,8 @@ svg.UctUV {
     display: flex;
     align-items: baseline;
     justify-content: left !important;
+    margin-bottom: 7px;
+    margin-top: 7px;
 
     svg {
         height: 14px;
@@ -171,4 +177,15 @@ svg.UctUV {
         fill: #febb02;
         margin: 0 1%;
     }
+}
+
+.priceFig{
+    font-weight: 800;
+    color: #222222;
+    display: inline;
+}
+
+.location-col{
+    color: #717171;
+    text-overflow: ellipsis;
 }

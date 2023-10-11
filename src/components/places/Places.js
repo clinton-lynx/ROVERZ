@@ -60,36 +60,36 @@ const Places = () => {
             </div>
             <div className="main-slider-container">
                 <Slider {...settings}>
-                    <div className="place-card-container">
+                    <Link to="/destination" className="place-card-container">
                         <Maincards />
-                    </div>
-                    <div className="place-card-container">
+                    </Link>
+                    <Link to="/destination" className="place-card-container">
                         <Maincards />
-                    </div>
-                    <div className="place-card-container">
+                    </Link>
+                    <Link to="/destination" className="place-card-container">
                         <Maincards />
-                    </div>
-                    <div className="place-card-container">
+                    </Link>
+                    <Link to="/destination" className="place-card-container">
                         <Maincards />
-                    </div>
-                    <div className="place-card-container">
+                    </Link>
+                    <Link to="/destination" className="place-card-container">
                         <Maincards />
-                    </div>
-                    <div className="place-card-container">
+                    </Link>
+                    <Link to="/destination" className="place-card-container">
                         <Maincards />
-                    </div>
-                    <div className="place-card-container">
+                    </Link>
+                    <Link to="/destination" className="place-card-container">
                         <Maincards />
-                    </div>
-                    <div className="place-card-container">
+                    </Link>
+                    <Link to="/destination" className="place-card-container">
                         <Maincards />
-                    </div>
-                    <div className="place-card-container">
+                    </Link>
+                    <Link to="/destination" className="place-card-container">
                         <Maincards />
-                    </div>
-                    <div className="place-card-container">
+                    </Link>
+                    <Link to="/destination" className="place-card-container">
                         <Maincards />
-                    </div>
+                    </Link>
                 </Slider>
             </div>
         </div>
@@ -143,7 +143,9 @@ const Maincards = () => {
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.555 8.729a1.505 1.505 0 0 0-1.406-.98h-6.087a.5.5 0 0 1-.472-.334l-2.185-6.193a1.5 1.5 0 0 0-2.81 0l-.005.016-2.18 6.177a.5.5 0 0 1-.471.334H1.85A1.5 1.5 0 0 0 .887 10.4l5.184 4.3a.5.5 0 0 1 .155.543l-2.178 6.531a1.5 1.5 0 0 0 2.31 1.684l5.346-3.92a.5.5 0 0 1 .591 0l5.344 3.919a1.5 1.5 0 0 0 2.312-1.683l-2.178-6.535a.5.5 0 0 1 .155-.543l5.194-4.306a1.5 1.5 0 0 0 .433-1.661z"></path></svg>
 
                             </div>
-                        <Link to="/destination" className="card-header-text">Lekki Conversion from $139 per adult</Link>
+                        <Link to="/destination" className="card-header-text">Lekki Conversion from <h3 className="priceFig"> $139</h3> per adult</Link>
+
+                        <p className="location-col">3,406 kilometers from Ikoyi</p>
 
                     </div>
 
