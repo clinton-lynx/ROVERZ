@@ -143,6 +143,9 @@ input.Larger {
         padding: 2%;
         display: flex;
         align-items: flex-start;
+        @include breakpoint-down ($sm) {
+            flex-direction: column;
+        }
 
     }
 }
@@ -151,8 +154,14 @@ input.Larger {
 .Image-general-container {
     min-height: 15rem;
     max-height: 15rem;
-    min-width: 15rem;
+    width: 100%;
+    max-width: 15rem;
     position: relative;
+
+    @include breakpoint-down ($sm) {
+      width: 100%;
+      max-width: none;
+    }
 }
 
 .Image-container {
@@ -162,6 +171,18 @@ input.Larger {
     min-height: inherit;
     max-height: inherit;
     z-index: 0;
+
+    @include breakpoint-down ($sm) {
+        min-width: 24.2rem;
+        max-width: none;
+     }
+
+     @include breakpoint-down ($xs) {
+        width: inherit;
+        max-width: none;
+        min-width: auto;
+     }
+
 
 
     Img {
@@ -202,6 +223,10 @@ input.Larger {
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: row;
+
+    @include breakpoint-down ($sm) {
+        margin: 0;
+    }
 
 
 
@@ -416,6 +441,13 @@ h2.loct-text-dol {
     align-items: center;
     justify-content: space-between;
 
+    @include breakpoint-down ($sm) {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+
+
     .grid-stack-layout {
         width: 100%;
         max-width: 17rem;
@@ -562,12 +594,28 @@ h2.loct-text-dol {
         align-items: center;
         flex-direction: column;
         box-sizing: border-box;
+
+        @include breakpoint-down ($md) {
+            width: 49%;
+        }
+
+        @include breakpoint-down ($sm) {
+            width: 99%;
+        }
          
         .Image-general-container{
             width: 100%;
+            max-width: none;
 
             .Image-container{
                 max-width: 23.3rem;
+                @include breakpoint-down ($md) {
+                   max-width: 25.3rem;
+                }
+
+                @include breakpoint-down ($sm) {
+                    max-width: 36.3rem;
+                }
             }
         }
 

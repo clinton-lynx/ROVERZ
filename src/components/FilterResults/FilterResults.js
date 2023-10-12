@@ -654,6 +654,21 @@ const FilterResults = () => {
                         <FilterLocation />
                         <FilterLocation />
                         <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
+                        <FilterLocation />
                     </div>
 
                     <div className="pagination-container">
